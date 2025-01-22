@@ -1,4 +1,86 @@
 ---
-title: "New file"
-description: "Description of your new file."
+title: "Architecture and Technical Overview"
+description: "System Overview"
 ---
+
+### **System Architecture**
+
+The Kontratar platform is built on a modular architecture that ensures scalability, efficiency, and security. It consists of the following layers:
+
+1. **Frontend**: The user interface is built with **Next.js**, providing server-side rendering for efficient data presentation and a seamless user experience.
+
+2. **Backend**: A Java-based backend processes user inputs, interacts with AI models for content generation, and manages communications with the database.
+
+3. **Load Balancer**: A load balancer ensures the system can handle multiple users simultaneously by distributing requests across multiple backend instances. This ensures reliability and prevents server overload.
+
+4. **Containers**: Both the frontend and backend are packaged in Docker containers, enabling consistent deployment across different environments. Each client can run their own isolated instance of Kontratar, ensuring data security and privacy.
+
+### **Components**
+
+* **Next.js**
+
+  * **Manages the frontend, handling what users interact with directly.**
+
+  * **Connects to the backend for data retrieval and rendering.**
+
+* **Backend (Java)**
+
+  * **Processes user inputs, manages authentication, and handles AI operations.**
+
+  * **Routes requests to appropriate data sources or AI models for generating content.**
+
+* **PostgreSQL**
+
+  * **Acts as the primary database for structured data.**
+
+  * **Stores key information, including user profiles, contract details, and custom opportunities.**
+
+  * **Organized into schemas to streamline data management and retrieval.**
+
+* **Chroma DB**
+
+  * **A vector database used for similarity matching and ranking.**
+
+  * **Stores embeddings created during the processing of opportunities to enable contract recommendations and rankings.**
+
+* **Vercel AI SDK**
+
+  * **Powers the AI-driven features of Kontratar, including proposal generation and chatbot functionality.**
+
+  * **Integrates with OpenAI models for generating responses and content.**
+
+### **Data Flow**
+
+* **Data Retrieval**
+
+  * Contract opportunities are retrieved daily from external platforms, such as SAM.gov and Ebuy, through web scraping.
+
+  * Custom opportunities provided by clients are processed and stored alongside fetched data.
+
+* **Data Processing**
+
+  * Retrieved opportunities are processed into structured formats and stored in PostgreSQL.
+
+  * During processing, vector embeddings are generated and stored in Chroma DB, enabling similarity searches and ranking functionalities.
+
+* **Data Storage**
+
+  * **PostgreSQL** handles structured data such as user profiles and contract details.
+
+  * **Chroma DB** stores vector embeddings for contract matching and recommendations.
+
+* **Data Retrieval and Interaction**
+
+  * The frontend sends user requests to the backend.
+
+  * The backend retrieves relevant data from PostgreSQL or Chroma DB, processes it, and returns it to the frontend for display.
+
+  * For AI operations, the backend leverages the Vercel AI SDK to generate proposals, facilitate chatbot interactions, or provide recommendations.
+
+#### **Security Measures**
+
+* The database is configured to prevent external access, ensuring sensitive information is secure.
+
+* Docker containers provide isolated environments for each client, protecting data integrity and privacy.
+
+* All communications between the frontend, backend, and database are encrypted to prevent unauthorized access.
