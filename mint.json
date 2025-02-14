@@ -5,7 +5,7 @@
     "dark": "/logo/dark.svg",
     "light": "/logo/light.svg"
   },
-  "favicon": "/favicon.svg",
+  "favicon": "/image.webp",
   "colors": {
     "primary": "#0D9373",
     "light": "#07C983",
@@ -58,6 +58,20 @@
       ]
     },
     {
+      "group": "Features",
+      "pages": [
+        "features/chatbot",
+        "features/contractSearch",
+        "features/proposalManagement"
+      ]
+    },
+    {
+      "group": "Security & Compliance",
+      "pages": [
+        "SecurityandCompliance"
+      ]
+    },
+    {
       "group": "Essentials",
       "pages": [
         "essentials/markdown",
@@ -84,8 +98,8 @@
     }
   ],
   "footerSocials": {
-    "x": "https://x.com/mintlify",
-    "github": "https://github.com/mintlify",
-    "linkedin": "https://linkedin.com/company/mintlify"
+    "x": "https://x.com/kontratar_",
+    "github": "https://github.com/adept-engineering",
+    "linkedin": "https://www.linkedin.com/company/kontratar"
   }
 }
