@@ -58,11 +58,18 @@
       ]
     },
     {
-      "group": "Features",
+      "group":"User Guide",
       "pages": [
+        "UserGuide",
         "features/chatbot",
         "features/contractSearch",
         "features/proposalManagement"
+      ]
+    },
+    {
+      "group": "Features",
+      "pages": [
+      
       ]
     },
     {
