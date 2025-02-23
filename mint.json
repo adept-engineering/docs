@@ -41,7 +41,8 @@
       "group": "Get Started",
       "pages": [
         "introduction",
-        "quickstart"
+        "quickstart",
+        "FAQs"
       ]
     },
     {
@@ -53,9 +54,9 @@
       ]
     },
     {
-      "group": "Features",
+      "group": "Why Kontratar?",
       "pages": [
-      "userGuide/chatbot"
+        "BenefitsOfKontratar"
       ]
     },
     {
@@ -63,6 +64,12 @@
       "pages": [
         "securityCompliance/passphrase",
         "securityCompliance/twofactor"
+      ]
+    },
+    {
+      "group":"Support",
+      "pages": [
+      "Maintenanceandsupport"
       ]
     }
   ],
