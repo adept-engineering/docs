@@ -41,8 +41,7 @@
       "group": "Get Started",
       "pages": [
         "introduction",
-        "quickstart",
-        "FAQs"
+        "quickstart"
       ]
     },
     {
@@ -53,6 +52,12 @@
         "userGuide/proposalManagement"
       ]
     },
+     {
+      "group":"Features",
+      "pages": [
+        "FeaturesofKontratar"
+      ]
+    },
     {
       "group": "Why Kontratar?",
       "pages": [
@@ -61,6 +66,7 @@
     },
     {
       "group": "Security & Compliance",
+      "icon": "newspaper",
       "pages": [
         "securityCompliance/passphrase",
         "securityCompliance/twofactor"
@@ -69,7 +75,8 @@
     {
       "group":"Support",
       "pages": [
-      "Maintenanceandsupport"
+      "Maintenanceandsupport",
+      "FAQs"
       ]
     }
   ],
