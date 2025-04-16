@@ -54,8 +54,11 @@
     },
      {
       "group":"Features",
+       "icon": "newspaper",
       "pages": [
-        "FeaturesofKontratar"
+        "FeaturesofKontratar",
+        "TrackOpportunities",
+        "AdministrationWorkspace"
       ]
     },
     {
