@@ -61,18 +61,19 @@
         "AdministrationWorkspace"
       ]
     },
-    {
-      "group": "Why Kontratar?",
-      "pages": [
-        "BenefitsOfKontratar"
-      ]
-    },
+    
     {
       "group": "Security & Compliance",
       "icon": "newspaper",
       "pages": [
         "securityCompliance/passphrase",
         "securityCompliance/twofactor"
+      ]
+    },
+    {
+      "group": "Why Kontratar?",
+      "pages": [
+        "BenefitsOfKontratar"
       ]
     },
     {
