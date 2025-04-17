@@ -51,7 +51,8 @@
         "userGuide/chatbot",
         "userGuide/proposalManagement",
         "PaymentSubscription",
-        "ProposalGeneration"
+        "ProposalGeneration",
+        "TeamSimulation"
       ]
     },
      {
