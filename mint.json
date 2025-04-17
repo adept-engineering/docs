@@ -49,7 +49,9 @@
       "pages": [
         "userGuide/contractSearch",
         "userGuide/chatbot",
-        "userGuide/proposalManagement"
+        "userGuide/proposalManagement",
+        "PaymentSubscription",
+        "ProposalGeneration"
       ]
     },
      {
