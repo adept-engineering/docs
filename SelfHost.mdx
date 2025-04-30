@@ -1,0 +1,178 @@
+---
+title: " Self-Hosting User Guidele"
+description: "Welcome to the Kontratar Self-Hosting Guide. This documentation is designed to walk you through setting up your own private instance of the Kontratar platform. It covers prerequisites, environment configuration, security, installation, and deployment."
+---
+
+## Requirements
+
+Before starting, ensure your environment meets the following:
+
+### System Requirements
+
+- OS: Linux, macOS, or Windows with WSL
+- RAM: Minimum 8 GB
+- Disk: 10 GB free
+  The imporant thing is for the system to support Linux and Docker.
+
+### Software Requirements
+
+- Docker & Docker Compose installed
+- Python 3.8\+
+- Git
+- Liquibase (For Database Configuration Setup)
+- Internet access
+
+---
+
+## Prerequisites
+
+### 1. Database Setup
+
+- A running PostgreSQL database (self-hosted or cloud e.g. AWS RDS)
+- SSL certificate (`.crt`) to verify DB connection
+
+### 2. SMTP Setup
+
+- SMTP credentials for sending notification emails (optional but recommended)
+
+### 3. Redis
+
+- Redis host and credentials (cloud-based or self-hosted)
+
+### 4. Domain Name
+
+- A domain name with it required certificate to verifying the domain connection.
+
+---
+
+## Installation Steps
+
+### 1. Download the Installer
+
+```bash
+git clone https://github.com/your-org/kontratar-installer.git
+cd kontratar-installer
+
+# Please note the actual link would be updated later. 
+```
+
+### 2. Make the Installer Executable (Linux/macOS)
+
+```bash
+chmod +x install.py
+```
+
+### 3. Run the Installer
+
+```bash
+python3 install.py
+```
+
+You will be prompted to enter:
+
+- Base port for the application (e.g. 3000)
+- Domain name for the self-hosted app (e.g. example.yourdomain.com) and optional SSL cert path
+- PostgreSQL host, user, password, SSL cert path
+- Redis host, port, password
+- SMTP host, user, password, port
+
+The installer will:
+
+- Dynamically authenticate and access the Docker registry
+- Download and run Liquibase schema setup
+- Generate an `.env` file for environment variables
+- Create a `docker-compose.yml` file with dynamic port mapping
+- Pull and run all required containers
+
+---
+
+## 🔄 Port Mapping
+
+All services are offset from your base port (e.g. 3000):
+
+| Service             | Port Offset | Final Port |
+| ------------------- | ----------- | ---------- |
+| Frontend            | \+0         | 3000       |
+| Auth Service        | \+1         | 3001       |
+| Opps Controller     | \+2         | 3002       |
+| SAM Data Feed       | \+3         | 3003       |
+| SAM to Repository   | \+4         | 3004       |
+| Opportunity Service | \+5         | 3005       |
+| Award Repository    | \+6         | 3006       |
+| Information Service | \+7         | 3007       |
+| API Gateway         | \+8         | 3008       |
+
+---
+
+It is very important to note this ports, so understand where each service of the containers would be running.
+
+## 🔗 Accessing Your App
+
+Once containers are running, access the kontratar platform though:
+
+```url
+https://<your-domain>:<base-port>
+```
+
+You can verify service health with:
+
+```bash
+curl https://<your-domain>:3001/api/checkalive       # Auth service and other services
+curl https://<your-domain>:3008/api/gateway/checkalive # Specific for api service          
+```
+
+You can run the following to verify containers:
+
+```bash
+docker ps                 # List running containers
+docker logs <container>  # Inspect logs
+```
+
+---
+
+## Maintenance & Troubleshooting
+
+### Restarting Services
+
+```bash
+docker-compose down && docker-compose up -d
+```
+
+### Checking Logs
+
+```bash
+docker-compose logs -f <service_name>
+```
+
+### Check Container Logs
+
+```bash
+docker-compose logs -f <service_name>
+```
+
+### Updating Environment
+
+Edit `.env` and re-run:
+
+```bash
+docker-compose up -d --build
+```
+
+### Re-running the Installer
+
+To change configs completely, stop the running services with
+
+```bash
+docker-compose down
+```
+
+And then delete `.env` and `docker-compose.yml`:
+
+```bash
+rm .env docker-compose.yml
+python3 install.py
+```
+
+---
+
+Thank you for choosing Kontratar\!
