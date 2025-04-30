@@ -49,19 +49,18 @@
       "pages": [
         "userGuide/contractSearch",
         "userGuide/chatbot",
-        "userGuide/proposalManagement",
         "PaymentSubscription",
         "ProposalGeneration",
-        "TeamSimulation"
+        "TeamSimulation",
+        "AdministrationWorkspace",
+        "TrackOpportunities"
       ]
     },
      {
       "group":"Features",
        "icon": "newspaper",
       "pages": [
-        "FeaturesofKontratar",
-        "TrackOpportunities",
-        "AdministrationWorkspace"
+        "FeaturesofKontratar"
       ]
     },
     
