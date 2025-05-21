@@ -1,5 +1,5 @@
 ---
-title: " Self-Hosting User Guidele"
+title: "Self-Hosting User Guide"
 description: "Welcome to the Kontratar Self-Hosting Guide. This documentation is designed to walk you through setting up your own private instance of the Kontratar platform. It covers prerequisites, environment configuration, security, installation, and deployment."
 ---
 
@@ -49,7 +49,7 @@ Before starting, ensure your environment meets the following:
 
 ### 1. Download the Installer
 
-```bash
+```
 git clone https://github.com/your-org/kontratar-installer.git
 cd kontratar-installer
 
@@ -58,13 +58,13 @@ cd kontratar-installer
 
 ### 2. Make the Installer Executable (Linux/macOS)
 
-```bash
+```python
 chmod +x install.py
 ```
 
 ### 3. Run the Installer
 
-```bash
+```python
 python3 install.py
 ```
 
@@ -134,7 +134,7 @@ docker logs <container>  # Inspect logs
 
 ### Restarting Services
 
-```bash
+```
 docker-compose down && docker-compose up -d
 ```
 
@@ -146,7 +146,7 @@ docker-compose logs -f <service_name>
 
 ### Check Container Logs
 
-```bash
+```
 docker-compose logs -f <service_name>
 ```
 
@@ -154,7 +154,7 @@ docker-compose logs -f <service_name>
 
 Edit `.env` and re-run:
 
-```bash
+```
 docker-compose up -d --build
 ```
 
@@ -162,17 +162,15 @@ docker-compose up -d --build
 
 To change configs completely, stop the running services with
 
-```bash
+```
 docker-compose down
 ```
 
 And then delete `.env` and `docker-compose.yml`:
 
-```bash
+```
 rm .env docker-compose.yml
 python3 install.py
 ```
 
----
-
-Thank you for choosing Kontratar\!
+Thank you for choosing Kontratar.
