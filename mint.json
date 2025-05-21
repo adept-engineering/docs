@@ -47,7 +47,7 @@
     {
       "group":"User Guide",
       "pages": [
-        "userGuide/contractSearch",
+    
         "userGuide/chatbot",
         "PaymentSubscription",
         "ProposalGeneration",
