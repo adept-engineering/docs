@@ -15,23 +15,39 @@ description: "How to get started on Kontratar."
 - Environment setup (e.g, environment variables for database and AI SDK) - The environment variables needed are:
 
 ```
-DATABASE_URL
-AUTH_SECRET
-OPENAI_API_KEY
-SENTRY_AUTH_TOKEN
-AUTH_URL
-NEXT_PUBLIC_STRIPE_PUBLIC_KEY
-STRIPE_SECRET_KEY
-GITHUB_TOKEN
-ELK_URL
-ELK_PWD
-ELK_USERNAME
+DATABASE_URL=
+AUTH_SECRET=
+OPENAI_API_KEY =
+SENTRY_AUTH_TOKEN=
+AUTH_URL=
+AUTH_TRUST_HOST=
+NEXT_PUBLIC_STRIPE_PUBLIC_KEY=
+STRIPE_SECRET_KEY=
+GITHUB_TOKEN = 
+ELK_URL =
+ELK_PWD = 
+ELK_USERNAME = 
+SECRET_KEY=
+NEXT_PUBLIC_SAM_API=
+NEXT_PUBLIC_AUTH_URL=
+NEXT_PUBLIC_IS_URL=
+NEXT_PUBLIC_OPP_URL=
+NEXT_PUBLIC_VAPID_PUBLIC_KEY=
+VAPID_PRIVATE_KEY=
+NEXT_PUBLIC_API_URL=
+
+SHAREPOINT_CLIENT_ID=
+SHAREPOINT_CLIENT_SECRET=
+CLIENT_ID=
+SHAREPOINT_TENANT_ID=
+GOOGLE_AUTH_CLIENT_ID=
+GOOGLE_AUTH_CLIENT_SECRET=
 ```
 
 ### Quick Start
 
 - Logging in or setting up an account:
-- From the home page, click “Sign Up”.
+- From the home page, click “Log In”.
 - If you have an account, enter your email address and password and log in.
 
 ![Screenshot(146) Pn](/images/Screenshot\(146\).png)
@@ -77,7 +93,7 @@ Your account will be successfully created only if these conditions are met:
 
 - The work domain (e.g., [adeptengr.com](http://adeptengr.com)) must not have been registered before
 - Only one person per company can sign up through the registration page
-- Additional team members must be invited by the primary admin
+- The primary admin must invite additional team members
 
 <Note>
   ### Important Notes
@@ -87,7 +103,7 @@ Your account will be successfully created only if these conditions are met:
   - Personal email addresses (Gmail, Yahoo, etc.) are not accepted
   - Click sign up, and your account will be created if it satisfies all the following conditions:
   - The email address used must be a work email.
-  - The work domain (e.g. adeptengr.com) must not have been registered before. i.e. Only one person from a company can sign up from the sign-up page, others will be invited by the primary admin.
+  - The work domain (e.g. adeptengr.com) must not have been registered before. i.e., Only one person from a company can sign up from the sign-up page; the primary admin will invite others.
 </Note>
 
 ### Main Dashboard Overview
@@ -105,7 +121,7 @@ Your central command center featuring:
 - Data filtered by your selected NAICS codes
 - Key performance metrics at a glance
 
-### Opportunities (SAM/EBUY/CUSTOM)
+### Opportunities (SAM/CUSTOM)
 
 Complete opportunity management hub where you can:
 
@@ -115,9 +131,17 @@ Complete opportunity management hub where you can:
 - Discard unwanted opportunities
 - Users can also generate proposals from SAM and Custom opps
 - Access detailed information for each opportunity
-- Chat with AI chatbot for opportunity-specific insights
+- Chat with an AI chatbot for opportunity-specific insights
 
 ## Workspace Tools
+
+### Team Simulation
+
+- Analyzes your organization's fit based on opportunity requirements
+- Compares your capabilities with those of other partners
+- Helps you select the most suitable team or collaborator for a given contract
+
+Each opportunity may have its own set of requirements (e.g., _“Proposal should not exceed 12 pages”_), and the simulation will check how well you meet those criteria.
 
 ### Settings
 
@@ -161,3 +185,12 @@ Streamlined proposal creation and editing:
 - Edit and refine existing proposals
 - Collaborate with team members
 - Track proposal status and submissions
+
+### Categories
+
+Users can assign categories to documents to:
+
+- Organize files efficiently
+- Enable search and filtering
+- Group related content under custom or predefined labels
+- Streamline proposal and content management within the workspace
