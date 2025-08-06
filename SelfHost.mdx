@@ -11,8 +11,7 @@ Before starting, ensure your environment meets the following:
 
 - OS: Linux, macOS, or Windows with WSL
 - RAM: Minimum 8 GB
-- Disk: 10 GB free
-  The imporant thing is for the system to support Linux and Docker.
+- Disk: 10 GB free. The key requirement is for the system to support both Linux and Docker.
 
 ### Software Requirements
 
@@ -28,7 +27,7 @@ Before starting, ensure your environment meets the following:
 
 ### 1. Database Setup
 
-- A running PostgreSQL database (self-hosted or cloud e.g. AWS RDS)
+- A running PostgreSQL database (self-hosted or cloud e.g., AWS RDS)
 - SSL certificate (`.crt`) to verify DB connection
 
 ### 2. SMTP Setup
@@ -41,7 +40,7 @@ Before starting, ensure your environment meets the following:
 
 ### 4. Domain Name
 
-- A domain name with it required certificate to verifying the domain connection.
+- A domain name requires a certificate to verify the domain connection.
 
 ---
 
@@ -88,7 +87,7 @@ The installer will:
 
 ## 🔄 Port Mapping
 
-All services are offset from your base port (e.g. 3000):
+All services are offset from your base port (e.g., 3000):
 
 | Service             | Port Offset | Final Port |
 | ------------------- | ----------- | ---------- |
@@ -104,11 +103,11 @@ All services are offset from your base port (e.g. 3000):
 
 ---
 
-It is very important to note this ports, so understand where each service of the containers would be running.
+It is essential to note these ports, so that we understand where each service of the containers would be running.
 
 ## 🔗 Accessing Your App
 
-Once containers are running, access the kontratar platform though:
+Once containers are running, access the kontratar platform through:
 
 ```url
 https://<your-domain>:<base-port>
@@ -152,7 +151,7 @@ docker-compose logs -f <service_name>
 
 ### Updating Environment
 
-Edit `.env` and re-run:
+Edit `.env` And re-run:
 
 ```
 docker-compose up -d --build
