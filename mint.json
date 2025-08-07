@@ -40,15 +40,12 @@
     {
       "group": "Get Started",
       "pages": [
-        "introduction",
         "quickstart"
       ]
     },
     {
       "group":"User Guide",
       "pages": [
-    
-        "userGuide/chatbot",
         "PaymentSubscription",
         "ProposalGeneration",
         "TeamSimulation",
@@ -60,7 +57,9 @@
       "group":"Features",
        "icon": "newspaper",
       "pages": [
-        "FeaturesofKontratar"
+        "FeaturesofKontratar",
+        "Categories",
+        "Documents"
       ]
     },
     
@@ -76,6 +75,12 @@
       "group": "Why Kontratar?",
       "pages": [
         "BenefitsOfKontratar"
+      ]
+    },
+    {
+      "group":"Self Host",
+      "pages": [
+      "SelfHost"
       ]
     },
     {
