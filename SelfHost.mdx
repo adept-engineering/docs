@@ -15,11 +15,11 @@ Before starting, ensure your environment meets the following:
 
 ### Software Requirements
 
-- Docker & Docker Compose installed
-- Python 3.8\+
-- Git
-- Liquibase (For Database Configuration Setup)
-- Internet access
+- Docker & Docker Compose installed.
+- Python 3.8\+.
+- Git.
+- Liquibase (For Database Configuration Setup).
+- Internet access.
 
 ---
 
@@ -27,16 +27,16 @@ Before starting, ensure your environment meets the following:
 
 ### 1. Database Setup
 
-- A running PostgreSQL database (self-hosted or cloud e.g., AWS RDS)
-- SSL certificate (`.crt`) to verify DB connection
+- A running PostgreSQL database (self-hosted or cloud e.g., AWS RDS).
+- SSL certificate (`.crt`) to verify DB connection.
 
 ### 2. SMTP Setup
 
-- SMTP credentials for sending notification emails (optional but recommended)
+- SMTP credentials for sending notification emails (optional but recommended).
 
 ### 3. Redis
 
-- Redis host and credentials (cloud-based or self-hosted)
+- Redis host and credentials (cloud-based or self-hosted).
 
 ### 4. Domain Name
 
@@ -69,19 +69,19 @@ python3 install.py
 
 You will be prompted to enter:
 
-- Base port for the application (e.g. 3000)
-- Domain name for the self-hosted app (e.g. example.yourdomain.com) and optional SSL cert path
-- PostgreSQL host, user, password, SSL cert path
-- Redis host, port, password
-- SMTP host, user, password, port
+- Base port for the application (e.g. 3000).
+- Domain name for the self-hosted app (e.g. example.yourdomain.com) and optional SSL cert path.
+- PostgreSQL host, user, password, SSL cert path.
+- Redis host, port, and password.
+- SMTP host, user, password, port.
 
 The installer will:
 
-- Dynamically authenticate and access the Docker registry
-- Download and run Liquibase schema setup
-- Generate an `.env` file for environment variables
-- Create a `docker-compose.yml` file with dynamic port mapping
-- Pull and run all required containers
+- Dynamically authenticate and access the Docker registry.
+- Download and run Liquibase schema setup.
+- Generate an `.env` file for environment variables.
+- Create a `docker-compose.yml` file with dynamic port mapping.
+- Pull and run all required containers.
 
 ---
 
