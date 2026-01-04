@@ -1,0 +1,163 @@
+{
+  "$schema": "https://mintlify.com/docs.json",
+  "theme": "maple",
+  "name": "Kontratar Docs",
+  "icons": {"library": "lucide"},
+  "colors": {
+    "primary": "#51A8F2",
+    "light": "#51A8F2",
+    "dark": "#DB4560"
+  },
+  "favicon": "/logo/favicon.png",
+  "navigation": {
+   
+    "versions": [
+          {
+          "version": "1.2",
+          "groups": [
+            {
+              "group": "Get Started",
+             "icon": "play",
+                   "tag": "NEW",
+              "pages": [
+                "quickstart"
+              ]
+            },
+            {
+              "group": "User Guide",
+              "pages": [
+                "PaymentSubscription",
+                "ProposalGeneration",
+                "TeamSimulation",
+                "AdministrationWorkspace",
+                "TrackOpportunities"
+              ]
+            },
+            {
+              "group": "Features",
+              "icon": "newspaper",
+              "pages": [
+                "FeaturesofKontratar",
+                "Categories",
+                "Documents"
+              ]
+            },
+            {
+              "group": "Security & Compliance",
+              "icon": "newspaper",
+              "pages": [
+                "securityCompliance/passphrase",
+                "securityCompliance/twofactor"
+              ]
+            },
+            {
+              "group": "Why Kontratar?",
+              "pages": [
+                "BenefitsOfKontratar"
+              ]
+            },
+            {
+              "group": "Self Host",
+              "pages": [
+                "SelfHost"
+              ]
+            },
+            {
+              "group": "Support",
+              "pages": [
+                "Maintenanceandsupport",
+                "FAQs"
+              ]
+            }
+          ]
+        },
+         {
+          "version": "2.0",
+          "groups": [
+            {
+              "group": "Get Started",
+              "pages": [
+                "quickstart"
+              ]
+            },
+            {
+              "group": "User Guide",
+              "pages": [
+                "PaymentSubscription",
+                "ProposalGeneration",
+                "TeamSimulation",
+                "AdministrationWorkspace",
+                "TrackOpportunities"
+              ]
+            },
+            {
+              "group": "Features",
+              "icon": "newspaper",
+              "pages": [
+                "FeaturesofKontratar",
+                "Categories",
+                "Documents"
+              ]
+            },
+            {
+              "group": "Security & Compliance",
+              "icon": "newspaper",
+              "pages": [
+                "securityCompliance/passphrase",
+                "securityCompliance/twofactor"
+              ]
+            },
+            {
+              "group": "Why Kontratar?",
+              "pages": [
+                "BenefitsOfKontratar"
+              ]
+            },
+            {
+              "group": "Self Host",
+              "pages": [
+                "SelfHost"
+              ]
+            },
+            {
+              "group": "Support",
+              "pages": [
+                "Maintenanceandsupport",
+                "FAQs"
+              ]
+            }
+          ]
+        }  
+      ]
+  },
+  "logo": {
+    "light": "/logo/logo.png",
+    "dark": "/logo/logo.png"
+  },
+  "background": {
+    "color": {
+      "light": "#ffffff",
+      "dark": "#011f2d"
+    }
+  },
+  "navbar": {
+    "links": [
+      {
+        "label": "Support",
+        "href": "mailto:support@kontratar.com"
+      }
+    ],
+    "primary": {
+      "type": "button",
+      "label": "Get Started",
+      "href": "https://kontratar.com"
+    }
+  },
+  "footer": {
+    "socials": {
+      "x": "https://x.com/kontratar_",
+      "website": "https://kontratar.com",
+      "linkedin": "https://www.linkedin.com/company/kontratar"
+    }
+  }
+}
