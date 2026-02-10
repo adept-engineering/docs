@@ -10,125 +10,124 @@
   },
   "favicon": "/logo/favicon.png",
   "navigation": {
-   
     "versions": [
+      {
+        "version": "1.2",
+        "groups": [
           {
-          "version": "1.2",
-          "groups": [
-            {
-              "group": "Get Started",
-             "icon": "play",
-                   "tag": "NEW",
-              "pages": [
-                "quickstart"
-              ]
-            },
-            {
-              "group": "User Guide",
-              "pages": [
-                "PaymentSubscription",
-                "ProposalGeneration",
-                "TeamSimulation",
-                "AdministrationWorkspace",
-                "TrackOpportunities"
-              ]
-            },
-            {
-              "group": "Features",
-              "icon": "newspaper",
-              "pages": [
-                "FeaturesofKontratar",
-                "Categories",
-                "Documents"
-              ]
-            },
-            {
-              "group": "Security & Compliance",
-              "icon": "newspaper",
-              "pages": [
-                "securityCompliance/passphrase",
-                "securityCompliance/twofactor"
-              ]
-            },
-            {
-              "group": "Why Kontratar?",
-              "pages": [
-                "BenefitsOfKontratar"
-              ]
-            },
-            {
-              "group": "Self Host",
-              "pages": [
-                "SelfHost"
-              ]
-            },
-            {
-              "group": "Support",
-              "pages": [
-                "Maintenanceandsupport",
-                "FAQs"
-              ]
-            }
-          ]
-        },
-         {
-          "version": "2.0",
-          "groups": [
-            {
-              "group": "Get Started",
-              "pages": [
-                "quickstart"
-              ]
-            },
-            {
-              "group": "User Guide",
-              "pages": [
-                "PaymentSubscription",
-                "ProposalGeneration",
-                "TeamSimulation",
-                "AdministrationWorkspace",
-                "TrackOpportunities"
-              ]
-            },
-            {
-              "group": "Features",
-              "icon": "newspaper",
-              "pages": [
-                "FeaturesofKontratar",
-                "Categories",
-                "Documents"
-              ]
-            },
-            {
-              "group": "Security & Compliance",
-              "icon": "newspaper",
-              "pages": [
-                "securityCompliance/passphrase",
-                "securityCompliance/twofactor"
-              ]
-            },
-            {
-              "group": "Why Kontratar?",
-              "pages": [
-                "BenefitsOfKontratar"
-              ]
-            },
-            {
-              "group": "Self Host",
-              "pages": [
-                "SelfHost"
-              ]
-            },
-            {
-              "group": "Support",
-              "pages": [
-                "Maintenanceandsupport",
-                "FAQs"
-              ]
-            }
-          ]
-        }  
-      ]
+            "group": "Get Started",
+            "icon": "play",
+            "pages": [
+              "quickstart"
+            ]
+          },
+          {
+            "group": "User Guide",
+            "pages": [
+              "PaymentSubscription",
+              "ProposalGeneration",
+              "TeamSimulation",
+              "AdministrationWorkspace",
+              "TrackOpportunities"
+            ]
+          },
+          {
+            "group": "Features",
+            "icon": "newspaper",
+            "pages": [
+              "FeaturesofKontratar",
+              "Categories",
+              "Documents"
+            ]
+          },
+          {
+            "group": "Security & Compliance",
+            "icon": "newspaper",
+            "pages": [
+              "securityCompliance/passphrase",
+              "securityCompliance/twofactor"
+            ]
+          },
+          {
+            "group": "Why Kontratar?",
+            "pages": [
+              "BenefitsOfKontratar"
+            ]
+          },
+          {
+            "group": "Self Host",
+            "pages": [
+              "SelfHost"
+            ]
+          },
+          {
+            "group": "Support",
+            "pages": [
+              "Maintenanceandsupport",
+              "FAQs"
+            ]
+          }
+        ]
+      },
+      {
+        "version": "2.0",
+        "groups": [
+          {
+            "group": "Get Started",
+            "expanded": true,
+            "pages": [
+              "quickstart"
+            ]
+          },
+          {
+            "group": "User Guide",
+            "pages": [
+              "PaymentSubscription",
+              "ProposalGeneration",
+              "TeamSimulation",
+              "AdministrationWorkspace",
+              "TrackOpportunities"
+            ]
+          },
+          {
+            "group": "Features",
+            "icon": "newspaper",
+            "pages": [
+              "FeaturesofKontratar",
+              "Categories",
+              "Documents"
+            ]
+          },
+          {
+            "group": "Security & Compliance",
+            "icon": "newspaper",
+            "pages": [
+              "securityCompliance/passphrase",
+              "securityCompliance/twofactor"
+            ]
+          },
+          {
+            "group": "Why Kontratar?",
+            "pages": [
+              "BenefitsOfKontratar"
+            ]
+          },
+          {
+            "group": "Self Host",
+            "pages": [
+              "SelfHost"
+            ]
+          },
+          {
+            "group": "Support",
+            "pages": [
+              "Maintenanceandsupport",
+              "FAQs"
+            ]
+          }
+        ]
+      }
+    ]
   },
   "logo": {
     "light": "/logo/logo.png",
