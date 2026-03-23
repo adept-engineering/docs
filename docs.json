@@ -19,6 +19,7 @@
       "dark": "#011f2d"
     }
   },
+  "css": "/custom.css",
   "navbar": {
     "links": [
       {
@@ -70,7 +71,7 @@
         "groups": [
           {
             "group": "Overview",
-            "pages": ["Welcome", "Overview", "FeaturesofKontratar", "BenefitsOfKontratar"]
+            "pages": ["Overview", "FeaturesofKontratar", "BenefitsOfKontratar"]
           },
           {
             "group": "Get Started",
