@@ -18,6 +18,12 @@
     "codeblocks": "system",
     "fontSize": "sm"
   },
+  "redirects": [
+    {
+      "source": "/",
+      "destination": "/Welcome"
+    }
+  ],
   "background": {
     "color": {
       "light": "#ffffff",
