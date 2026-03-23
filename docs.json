@@ -46,7 +46,7 @@
         "groups": [
           {
             "group": "What's New",
-            "pages": ["Version-2/whats-new"]
+            "pages": ["whats-new-v2"]
           },
           {
             "group": "Market Intelligence",
@@ -62,34 +62,6 @@
               "Version-2/Pipeline-Management",
               "Version-2/Campaigns"
             ]
-          },
-          {
-            "group": "Core Features",
-            "pages": [
-              "TrackOpportunities",
-              "ProposalGeneration",
-              "TeamSimulation"
-            ]
-          },
-          {
-            "group": "Workspace",
-            "pages": [
-              "AdministrationWorkspace",
-              "Documents",
-              "Categories"
-            ]
-          },
-          {
-            "group": "Security & Compliance",
-            "pages": ["securityCompliance/passphrase", "securityCompliance/twofactor"]
-          },
-          {
-            "group": "Self-Hosting",
-            "pages": ["SelfHost"]
-          },
-          {
-            "group": "Support",
-            "pages": ["Maintenanceandsupport", "FAQs"]
           }
         ]
       },
@@ -98,7 +70,7 @@
         "groups": [
           {
             "group": "Overview",
-            "pages": ["Overview", "FeaturesofKontratar", "BenefitsOfKontratar"]
+            "pages": ["Welcome", "Overview", "FeaturesofKontratar", "BenefitsOfKontratar"]
           },
           {
             "group": "Get Started",
