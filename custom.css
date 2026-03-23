@@ -1,0 +1,33 @@
+:root {
+  --font-body: 'Inter', sans-serif;
+  --font-headings: 'Sora', sans-serif;
+}
+
+body {
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+h1 {
+  font-size: 28px;
+  font-weight: 600;
+}
+
+h2 {
+  font-size: 22px;
+  font-weight: 600;
+}
+
+h3 {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+h4 {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+p, li, td {
+  font-size: 15px;
+}
