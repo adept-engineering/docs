@@ -9,126 +9,6 @@
     "dark": "#DB4560"
   },
   "favicon": "/logo/favicon.png",
-  "navigation": {
-    "versions": [
-      {
-        "version": "1.2",
-        "groups": [
-          {
-            "group": "Get Started",
-            "icon": "play",
-            "pages": [
-              "quickstart"
-            ]
-          },
-          {
-            "group": "User Guide",
-            "pages": [
-              "PaymentSubscription",
-              "ProposalGeneration",
-              "TeamSimulation",
-              "AdministrationWorkspace",
-              "TrackOpportunities"
-            ]
-          },
-          {
-            "group": "Features",
-            "icon": "newspaper",
-            "pages": [
-              "FeaturesofKontratar",
-              "Categories",
-              "Documents"
-            ]
-          },
-          {
-            "group": "Security & Compliance",
-            "icon": "newspaper",
-            "pages": [
-              "securityCompliance/passphrase",
-              "securityCompliance/twofactor"
-            ]
-          },
-          {
-            "group": "Why Kontratar?",
-            "pages": [
-              "BenefitsOfKontratar"
-            ]
-          },
-          {
-            "group": "Self Host",
-            "pages": [
-              "SelfHost"
-            ]
-          },
-          {
-            "group": "Support",
-            "pages": [
-              "Maintenanceandsupport",
-              "FAQs"
-            ]
-          }
-        ]
-      },
-      {
-        "version": "2.0",
-        "groups": [
-          {
-            "group": "Get Started",
-            "expanded": true,
-            "pages": [
-              "quickstart"
-            ]
-          },
-          {
-            "group": "User Guide",
-            "pages": [
-              "PaymentSubscription",
-              "ProposalGeneration",
-              "TeamSimulation",
-              "AdministrationWorkspace",
-              "TrackOpportunities"
-            ]
-          },
-          {
-            "group": "Features",
-            "icon": "newspaper",
-            "pages": [
-              "FeaturesofKontratar",
-              "Categories",
-              "Documents"
-            ]
-          },
-          {
-            "group": "Security & Compliance",
-            "icon": "newspaper",
-            "pages": [
-              "securityCompliance/passphrase",
-              "securityCompliance/twofactor"
-            ]
-          },
-          {
-            "group": "Why Kontratar?",
-            "pages": [
-              "BenefitsOfKontratar"
-            ]
-          },
-          {
-            "group": "Self Host",
-            "pages": [
-              "SelfHost"
-            ]
-          },
-          {
-            "group": "Support",
-            "pages": [
-              "Maintenanceandsupport",
-              "FAQs"
-            ]
-          }
-        ]
-      }
-    ]
-  },
   "logo": {
     "light": "/logo/logo.png",
     "dark": "/logo/logo.png"
@@ -158,5 +38,150 @@
       "website": "https://kontratar.com",
       "linkedin": "https://www.linkedin.com/company/kontratar"
     }
+  },
+  "navigation": {
+    "versions": [
+      {
+        "version": "2.0",
+        "groups": [
+          {
+            "group": "What's New",
+            "pages": ["Version-2/whats-new"]
+          },
+          {
+            "group": "Market Intelligence",
+            "pages": [
+              {
+                "group": "Awards",
+                "pages": ["Version-2/Awards"]
+              },
+              {
+                "group": "Forecasts",
+                "pages": ["Version-2/Forecasts"]
+              },
+              {
+                "group": "eBuy Opportunities",
+                "pages": ["Version-2/eBuy-Opportunities"]
+              }
+            ]
+          },
+          {
+            "group": "Business Development",
+            "pages": [
+              {
+                "group": "Pipeline Management",
+                "pages": ["Version-2/Pipeline-Management"]
+              },
+              {
+                "group": "Campaigns",
+                "pages": ["Version-2/Campaigns"]
+              }
+            ]
+          },
+          {
+            "group": "Core Features",
+            "pages": [
+              {
+                "group": "Opportunity Management",
+                "pages": ["TrackOpportunities"]
+              },
+              {
+                "group": "Proposal Generation",
+                "pages": ["ProposalGeneration"]
+              },
+              {
+                "group": "Team Simulation",
+                "pages": ["TeamSimulation"]
+              }
+            ]
+          },
+          {
+            "group": "Workspace",
+            "pages": [
+              {
+                "group": "Administration",
+                "pages": ["AdministrationWorkspace"]
+              },
+              {
+                "group": "Documents & Categories",
+                "pages": ["Documents", "Categories"]
+              }
+            ]
+          },
+          {
+            "group": "Security & Compliance",
+            "pages": ["securityCompliance/passphrase", "securityCompliance/twofactor"]
+          },
+          {
+            "group": "Self-Hosting",
+            "pages": ["SelfHost"]
+          },
+          {
+            "group": "Support",
+            "pages": ["Maintenanceandsupport", "FAQs"]
+          }
+        ]
+      },
+      {
+        "version": "1.2",
+        "groups": [
+          {
+            "group": "Welcome",
+            "pages": ["welcome"]
+          },
+          {
+            "group": "Overview",
+            "pages": ["overview", "FeaturesofKontratar", "BenefitsOfKontratar"]
+          },
+          {
+            "group": "Get Started",
+            "icon": "play",
+            "pages": ["quickstart", "user-guide", "PaymentSubscription"]
+          },
+          {
+            "group": "Core Features",
+            "pages": [
+              {
+                "group": "Opportunity Management",
+                "pages": ["TrackOpportunities"]
+              },
+              {
+                "group": "Proposal Generation",
+                "pages": ["ProposalGeneration"]
+              },
+              {
+                "group": "Team Simulation",
+                "pages": ["TeamSimulation"]
+              }
+            ]
+          },
+          {
+            "group": "Workspace",
+            "pages": [
+              {
+                "group": "Administration",
+                "pages": ["AdministrationWorkspace"]
+              },
+              {
+                "group": "Documents & Categories",
+                "pages": ["Documents", "Categories"]
+              }
+            ]
+          },
+          {
+            "group": "Security & Compliance",
+            "pages": ["securityCompliance/passphrase", "securityCompliance/twofactor"]
+          },
+          {
+            "group": "Self-Hosting",
+            "pages": ["SelfHost"]
+          },
+          {
+            "group": "Support",
+            "pages": ["Maintenanceandsupport", "FAQs"]
+          }
+        ]
+      }
+    ]
   }
 }

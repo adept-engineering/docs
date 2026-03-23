@@ -1,23 +1,43 @@
 ---
 title: "Passphrase"
-description: "This section details essential protective measures including two-factor authentication and passphrase-based document encryption to safeguard user accounts and sensitive proposal documents."
+description: "How passphrase-based encryption protects proposal documents in Kontratar, and how to generate your passphrase."
 ---
 
-### Passphrase security for proposals
+Kontratar encrypts proposal documents using a tenant-specific passphrase. The passphrase is required to generate, view, and download proposals. This protects sensitive solicitation response data from unauthorized access.
 
-- Proposal documents are highly sensitive documents by nature.
-- We mitigate that by ensuring that every tenant has a unique passphrase, which you have to enter. before starting the generation proposal, viewing sections of proposals, and downloading proposals.
-- To get a passphrase, navigate to profile and then click on settings, then security.
-- Click on Generate Public Private Key Pair.
+## How it works
+
+Each tenant (organization) has a unique passphrase. This passphrase is used to encrypt and decrypt a public-private key pair that protects proposal documents.
+
+Kontratar does **not** store your passphrase. The platform stores only the password hash, which is used to decrypt the keys that encrypt the proposals. Only the public key (used for encryption) is visible in the platform.
+
+## Generating your passphrase
+
+1. Click your profile icon in the upper-right corner.
+2. Select **Settings**.
+3. Click the **Security** tab.
+4. Click **Generate Public Private Key Pair**.
+5. Record your passphrase and store it in a safe location.
 
 <Warning>
-  Please keep your passphrase safe. We do not store it. If you forget your passphrase, your generated proposals would be lost.
+  **If you forget your passphrase, your generated proposals cannot be recovered.** Kontratar does not store the passphrase and cannot reset it. Store your passphrase in a password manager or other secure location.
 </Warning>
 
-<Info>
-  We do not store the passphrase, only the password hash, which is used to decrypt the keys that encrypt the proposals.
-</Info>
+## When the passphrase is required
 
-<Note>
-  We only show the public key used to encrypt proposals.
-</Note>
+You are prompted to enter your passphrase in the following situations:
+
+| Action | Passphrase required |
+| --- | --- |
+| Generating a new proposal | Yes |
+| Viewing proposal sections | Yes |
+| Downloading a proposal | Yes |
+| Editing a proposal | Yes |
+
+## Related topics
+
+- [Multi-Factor Authentication](/securityCompliance/twofactor) — Enabling two-factor authentication for account security.
+- [Proposal Generation](/ProposalGeneration) — How proposals are generated and encrypted.
+- [Administrator Workspace](/AdministrationWorkspace) — Locks and access controls for additional security.
+
+**Parent topic:** [Kontratar v1.2 Documentation](/)

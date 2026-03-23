@@ -1,34 +1,106 @@
 ---
 title: "Features of Kontratar"
-description: "This section showcases Kontratar's integrated features for government contract management, from opportunity tracking and AI-powered proposal generation to resource planning, collaboration tools, compliance frameworks, and real-time updates."
+description: "A summary of each platform capability in Kontratar v1.2, with links to detailed documentation."
 ---
 
-**Proposal Generation**\
-Kontratar enables companies to generate **compliant**, high-quality proposals quickly. The system uses AI to analyze solicitation requirements, extract key details, and generate structured drafts aligned with government and commercial compliance standards. This ensures every proposal meets regulatory requirements while reducing the time needed to prepare submissions.
+# Features of Kontratar
 
-**Proposal Management**\
-Kontratar provides a centralized proposal management system where organizations can track, review, and manage all drafts, submissions, and completed proposals. The feature includes status tracking, compliance checks, and structured storage, ensuring that every proposal remains organized and aligned with government and commercial standards from creation through submission.
+This page lists each feature available in Kontratar v1.2. For step-by-step instructions, see the linked documentation page for each feature.
 
-**AI Opportunity Discovery**\
-Kontratar continuously monitors government databases such as [SAM.gov](http://SAM.gov), Customs, and other federal sources to identify relevant opportunities. Its AI-powered filters rank opportunities based on organizational capabilities, past performance, and compliance requirements. Users receive instant alerts on new solicitations, amendments, and approaching deadlines, ensuring they never miss a suitable opportunity.
+## Opportunity discovery
 
-**Team Collaboration and Simulation**\
-Kontratar enhances teamwork by allowing multiple users to work on the same proposal in a secure, centralized workspace. With role-based access, version control, and real-time editing, teams can collaborate seamlessly without losing structure or compliance alignment. The simulation capability allows organizations to test different proposal strategies before submission, improving competitiveness and success rates.
+Kontratar monitors SAM.gov and other federal procurement sources for contract opportunities. The platform filters results by NAICS code, agency, set-aside type, and date. Users receive notifications when new solicitations, amendments, or award announcements match their configured filters.
 
-**Zero Trust Compliance**\
-Kontratar employs Zero Trust Compliance across all proposal workflows to ensure maximum data security and regulatory adherence. This includes advanced encryption, strict role-based access controls, and compliance with frameworks such as NIST AI RMF, HIPAA, and FISMA. Sensitive information is protected at every stage, and proposals remain fully compliant with industry regulations.
+Opportunities are displayed in two tabs: **SAM** (federal opportunities from SAM.gov) and **Custom** (opportunities created manually by your organization for state, local, or commercial bids).
 
-**Real-Time Government Updates**\
-Kontratar scans official government sources continuously and delivers real-time notifications on new solicitations, amendments, and award announcements. By keeping users updated with the latest federal contracting activity, the platform ensures businesses remain ahead of deadlines and competitors, with accurate, timely intelligence.
+The AI ranks opportunities based on your organization's capabilities, past performance data, and uploaded documents.
 
-**Proposal Generation with Generative AI**\
-Kontratar integrates Generative AI to accelerate the drafting of compliant proposals by transforming solicitation data and organizational information into structured responses. This reduces manual effort, ensures alignment with requirements, and delivers tailored drafts that maintain compliance and consistency across submissions.
+See [Tracking Government Opportunities](/TrackOpportunities).
 
-**AI-Powered Matching and Ranking of Opportunities**\
-Kontratar’s AI engine analyzes organizational profiles, past performance, and expertise to identify and rank the most relevant opportunities. By focusing resources on opportunities with the highest probability of success, businesses can improve efficiency, allocate efforts strategically, and increase their win rates.
+## Proposal generation
 
-**Support Icon**\
-The Support feature provides users with direct access to resources and assistance. From this section, organizations can explore documentation, review product guides, and connect with customer support to resolve issues quickly. This ensures that users always have the help they need to work effectively.
+Kontratar generates structured proposal documents from tracked opportunities. The AI analyzes solicitation requirements, extracts compliance criteria, and combines them with your company profile and uploaded documents to produce a draft.
 
-**Reports**\
-The Reports feature allows organizations to track opportunities, partner activity, and agency updates through customized reporting. Administrators can choose how reports are delivered, either by email or through in-app notifications—ensuring information reaches teams most conveniently. By subscribing to specific agencies or partners, users receive timely updates on new opportunities and announcements, supporting informed decision-making and strategic planning.
+Three output types are available:
+
+| Type | Output |
+|---|---|
+| **Full Proposal** | Complete draft with all sections |
+| **Table of Contents** | Structural outline only |
+| **Requirements Only** | Extracted requirements for manual response |
+
+Proposals can be exported as Word (.docx) or PDF (.pdf) files.
+
+See [Proposal Generation](/ProposalGeneration).
+
+## Proposal management
+
+All generated proposals are stored in a centralized system. Administrators can view proposals across the organization, track draft and submission statuses, and manage the review process.
+
+Individual proposals are organized into volumes or sections (for example, Executive Summary, Technical Approach, Past Performance). Editors are assigned to sections, and the platform tracks changes with version control.
+
+See [Administrator Workspace](/AdministrationWorkspace).
+
+## Team simulation
+
+Team Simulation compares your organization's capabilities against a specific opportunity's requirements. The system analyzes your uploaded documents, company profile, and partner data to produce a fit assessment.
+
+You can run multiple simulations against different teaming partners to compare which organization or team has the strongest alignment with the opportunity.
+
+See [Team Simulation](/TeamSimulation).
+
+## Team collaboration
+
+Multiple users can work on the same proposal in a shared workspace. The platform provides:
+
+- Role-based access control (Super Admin, Tenant Admin, standard users)
+- Version control for all proposal edits
+- Editor assignment per proposal section
+- Due dates, deadlines, and reminders through the Actions tab
+
+See [Proposal Generation — Editing & Collaborating](/ProposalGeneration).
+
+## Document management
+
+Organizations upload files to a centralized document store. These files are used by the AI during proposal generation and team simulation. Supported document types include past performance narratives, capability statements, key personnel resumes, and certifications.
+
+Documents can be tagged with categories for organization and filtering.
+
+See [Documents](/Documents) and [Categories](/Categories).
+
+## Security
+
+Kontratar applies the following security measures:
+
+- **Passphrase encryption** — Proposal documents are encrypted with a tenant-specific passphrase. The passphrase is required to generate, view, and download proposals. Kontratar does not store the passphrase — only the password hash used to decrypt the encryption keys.
+- **Multi-factor authentication (MFA)** — Users can enable two-factor authentication using an authenticator app (Google Authenticator, Microsoft Authenticator, or similar).
+- **Role-based access** — Feature access is controlled by user role. The Administrator panel is visible only to Super Admins and Tenant Admins.
+- **Feature locks** — Tenant Admins can restrict access to specific features for additional security.
+
+See [Passphrase](/securityCompliance/passphrase) and [Multi-Factor Authentication](/securityCompliance/twofactor).
+
+## Government updates and notifications
+
+Kontratar scans federal procurement sources and delivers notifications on new solicitations, amendments, and award announcements. Notification delivery is configured in **Settings** and can also be managed through the **Reports** section of the Administrator panel, where users subscribe to updates from selected agencies or partners.
+
+Reports are delivered by email or in-app notification.
+
+## NAICS code configuration
+
+NAICS (North American Industry Classification System) codes control which opportunities appear in your dashboard and Opportunities tab. Codes are configured in **Administrator > NAICS Code**.
+
+Changes to NAICS code configuration take effect after 48 hours.
+
+## Reports
+
+The Reports feature allows administrators to subscribe to updates from selected agencies and partner organizations. Subscribed users receive the latest opportunities and announcements by email.
+
+See [Administrator Workspace](/AdministrationWorkspace).
+
+## Related topics
+
+- [User Guide](/user-guide) — Complete reference for the Kontratar interface.
+- [Benefits of Kontratar](/BenefitsOfKontratar) — How Kontratar affects proposal turnaround, cost, and win rates.
+- [FAQ](/FAQs) — Common questions about features, pricing, and functionality.
+
+**Parent topic:** [Overview](/overview)

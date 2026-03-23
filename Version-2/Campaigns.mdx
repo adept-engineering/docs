@@ -1,80 +1,84 @@
 ---
 title: "Campaigns"
+description: "How to create email templates and send bulk outreach campaigns to contracting officers and teaming partners."
 ---
 
-## **What are Campaigns?**
+**Campaigns **let you send bulk outreach emails to contracting officers, potential teaming partners, or other contacts. The system has two components: **Templates** (which define the email content) and **Campaigns** (which send a template to a list of recipients). Campaigns can be sent to government officials and private individuals.
 
-**Campaigns** let you send **bulk outreach emails** to contracting officers, potential teaming partners, or other contacts. The system has two components: **Templates** (which define the email content) and **Campaigns** (which send a template to recipients). Campaigns can be sent to **government officials** as well as **private individuals**.
+**How to get there:** Sidebar → Workspace → Click **Campaigns**
 
-**How to get there:** Sidebar → Workspace → Click **"Campaigns"**
+## Campaign templates
 
-[INSERT IMAGE: The Campaigns section showing the Templates tab and Campaigns tab. Navigate to Campaigns and capture the initial view.]
+A template defines the structure and content of your outreach email. Once created, a template can be reused across multiple campaigns.
 
-## **Campaign Templates**
+### Creating a template
 
-A **template** defines the structure and content of your outreach email. Once created, a template can be **reused across multiple campaigns**. You do not have to recreate the email content each time.
+1. On the Campaigns page, select the **Templates** tab.
+2. Click **Create New Template**.
+3. Fill in the following fields:
 
-**Creating a Template**
+| Field | Description |
+| --- | --- |
+| **Template Name** | A descriptive name (for example, "541511\_SUBSCRIPTION" or "AES\_8A\_REACHOUT"). |
+| **Status** | Set to **Active** to make the template available for campaigns. Set to **Inactive** to save as a draft. |
+| **Email Subject** | The subject line recipients see in their inbox. |
+| **Body** | The email content. Write it generically so it works for all recipients in a campaign. |
+| **Attachment** | Optional. Drag and drop a file or click to browse. Supported formats: PDF, TXT, DOC, DOCX, XLS, XLSX. |
 
-- On the Campaigns page, make sure the **Templates** tab is selected.
-- Click **Create New Template**.
-- Enter a **Template Name**. Use something descriptive, for example, "541511_SUBSCRIPTION" or "AES_8A_REACHOUT".
-- Set the **Status** to **Active**. Only Active templates can be selected when sending a campaign. Set it to **Inactive** if you want to save a draft that is not ready to use yet.
-- Write the **Email Subject** — this is the subject line recipients see in their inbox.
-- Write the **email Body**. This is the main content. Write it generically so it works for all recipients in a campaign.
-- Optionally, **upload an Attachment**. Drag and drop a file into the upload zone or click to browse. Supported formats: PDF, TXT, DOC, DOCX, XLS, XLSX.
-- Click **Create Template** to save.
+4. Click **Create Template** to save.
 
-[INSERT IMAGE: The template creation form showing Name, Status toggle, Email Subject, Body text area, and Attachment drag-and-drop upload zone. Click Create New Template and capture the full form.]
+### Customizable tokens in attachments
 
-**Customizable Tokens in Attachments**
+Campaign attachments support four customizable token fields. When you embed these tokens inside a PDF, CSV, or other attachment file, Kontratar replaces each token with the recipient-specific or campaign-specific data when the campaign is sent. This lets you personalize attached documents without creating a separate file for each recipient.
 
-- Campaign attachments support **four customizable token fields**.
-- When you embed these tokens inside a PDF, CSV, or other attachment file, Kontratar automatically replaces each token with the **recipient-specific** or **campaign-specific data** when the campaign is sent.
-- This lets you **personalize attached documents** without creating a separate file for each person.
+### Managing templates
 
-**Managing Existing Templates**
+The Templates tab shows a table of all your templates with columns: Name, Status (Active or Inactive), and Attachment (filename or dash if none).
 
-- On the **Templates tab**, you see a table listing all your templates with columns: **Name, Status** (Active or Inactive), and **Attachment** (shows the filename if attached, or a dash if none).
-- To **edit a template**, click **View/Edit** on that row. You can update the **name, subject, body, or attachment**.
-- To **delete a template permanently**, click **Delete** on that row.
-- To **temporarily disable a template** without deleting it, edit it and switch the **Status** to **Inactive**.
+| Action | How to do it |
+| --- | --- |
+| **Edit a template** | Click **View/Edit** on the template row. Update the name, subject, body, or attachment. |
+| **Delete a template** | Click **Delete** on the template row. This action is permanent. |
+| **Disable a template** | Edit the template and switch Status to **Inactive**. The template is preserved but cannot be selected for new campaigns. |
 
-[INSERT IMAGE: The templates management table showing multiple templates with Name, Status, and Attachment columns. Capture the Templates tab showing your list of templates.]
+## Sending a campaign
 
-## **Sending a Campaign**
+1. On the Campaigns page, click the **Campaigns** tab.
+2. Click **Create New Campaign**.
+3. Select a **Template** from the dropdown. Only templates with Active status appear.
+4. Enter recipient email addresses. You can type a single address or paste multiple addresses for bulk outreach.
+5. Review the preview showing the subject line, body, and attachment.
+6. Click **Send**. The email is dispatched to every address you entered.
 
-- On the Campaigns page, click the **Campaigns** tab.
-- Click **Create New Campaign**.
-- Select a **Template** from the dropdown. Only templates with **Active** status appear here.
-- Enter the **recipient email addresses**. You can type a single address or paste multiple addresses for bulk outreach.
-- Review the **preview** showing the subject line, body, and attachment.
-- Click **Send**. The email is dispatched simultaneously to every email address you entered.
+## The 21-day government email rule
 
-[INSERT IMAGE: The campaign creation form showing the template dropdown, recipient email input, and Send button. Create a new campaign and capture the form with a template selected.]
+When you send a campaign to a government email address, Kontratar tracks the send date. If you attempt to send another campaign to the same government email address within 21 days, the system displays a warning before allowing you to proceed.
 
-## **The 21-Day Government Email Rule**
+This restriction exists because government agencies monitor for unsolicited bulk emails. Sending multiple emails to the same contracting officer in a short window may cause your email address to be flagged as spam or blocked.
 
-- When you send a campaign to a **government email address**, Kontratar tracks the send date.
-- If you try to send another campaign to that same **government email address** within 21 days, the system displays a **warning message** before allowing you to proceed.
-- This exists because **government agencies actively monitor for unsolicited bulk emails**. Sending multiple emails to the same contracting officer in a short window may get your email address **flagged as spam or blocked**.
-- The **21-day cooling period** protects your **sender reputation**. You can override the warning and send anyway, but you do so **at your own risk**.
+The 21-day cooling period protects your sender reputation. You can override the warning and send anyway, but you do so at your own risk.
 
-[INSERT IMAGE: The 21-day warning message that appears when attempting to send to a recently-contacted government email. If possible, trigger the warning and capture the dialog.]
+## Campaign use cases
 
-## **Campaign Use Cases**
+### Expiring software contract outreach
 
-**Example 1 Expiring Software Contract Outreach**
+1. Go to **Forecasts**. Search for software contracts expiring within the next year.
+2. Collect contracting officer email addresses from the forecast detail pages.
+3. Go to **Campaigns**. Create a template highlighting your software renewal capabilities. Attach your Capability Statement PDF.
+4. Create a new Campaign using that template. Paste in the contracting officer emails.
+5. Click **Send**.
 
-- Go to Sidebar → Forecasts. Search for **software contracts expiring** within the next year.
-- Collect the **contracting officer email addresses** from the forecast detail pages.
-- Go to Sidebar → Campaigns. Create a template highlighting your **software renewal capabilities**. Attach your **Capability Statement PDF**.
-- Create a **new Campaign** using that template. Paste in the contracting officer emails.
-- Click **Send**.
+### Targeted industry capability outreach
 
-**Example 2 Targeted Industry Capability Outreach**
+1. Go to **Forecasts**. Search for agencies or companies currently using a specific technology (for example, IBM software).
+2. Gather relevant contact email addresses.
+3. Go to **Campaigns**. Create a template emphasizing your expertise with that technology. Attach your Capability Statement.
+4. Create a Campaign, paste in the email addresses, and send.
 
-- Go to Sidebar → Forecasts. Search for agencies or companies currently using **IBM software**.
-- Gather the relevant **contact email addresses**.
-- Go to Sidebar → Campaigns. Create a template emphasizing your **IBM expertise**. Attach your **Capability Statement**.
-- Create a **Campaign**, paste in the email addresses, and **send**.
+## Related topics
+
+- [Forecasts](/Version-2/Forecasts) — Finding future procurement opportunities and contracting officer contacts.
+- [Awards](/Version-2/Awards) — Researching who is winning contracts for competitive outreach.
+- [Pipeline Management](/Version-2/Pipeline-Management) — Tracking your outreach efforts through the capture lifecycle.
+
+**Parent topic:** [Kontratar v2.0 Documentation](/)

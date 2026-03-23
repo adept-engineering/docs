@@ -1,63 +1,55 @@
 ---
-title: "Forecasts"
+title: "eBuy Opportunities"
+description: "How to browse and respond to GSA Schedule opportunities from the eBuy portal in Kontratar."
 ---
 
-## **What are Forecasts?**
+**eBuy** is the GSA's online procurement system where government buyers post Requests for Quote (RFQ), Requests for Proposal (RFP), and Requests for Information (RFI) exclusively to companies that hold GSA Schedule contracts. Kontratar connects to your eBuy portal account and pulls these opportunities into the platform alongside your SAM.gov opportunities.
 
-Forecasts are **future procurement opportunities** that agencies have planned and announced but have not yet posted as formal solicitations on [**SAM.gov**](http://SAM.gov). Most federal agencies publish their planned procurements for the upcoming fiscal year in centralized **forecast databases**. Kontratar scrapes this data and makes it available to you.
+eBuy opportunities are tied to the SIN categories (NAICS codes) that you are subscribed to on the eBuy portal. You do not need to configure additional subscriptions inside Kontratar. As long as you are subscribed to the relevant SIN categories on eBuy, Kontratar surfaces those opportunities automatically.
 
-**Important distinction:** **Awards** are contracts already awarded. **Forecasts** are planned future procurements not yet solicited. **Opportunities** are active solicitations currently on [**SAM.gov**](http://SAM.gov) or **eBuy**. The typical lifecycle is: **Forecast → Opportunity → Award**.
+Kontratar generates proposals for eBuy opportunities using the same AI proposal engine as SAM.gov opportunities. The proposal quality and structure are the same regardless of source.
 
-You cannot **bid on, apply for, or respond to a forecast**. Forecasts are **informational only** — they tell you what is coming so you can prepare before the competition. You can, however, use the **Campaigns feature (Section 6)** to proactively reach out to contracting officers about forecasted opportunities.
+**How to get there:** Sidebar → Opportunities → Click **eBuy**
 
-**How to get there:** Sidebar → Click **"Forecasts"**
+## Browsing eBuy opportunities
 
-[INSERT IMAGE: The Forecasts section landing page showing the forecasts table. Click Forecasts in the sidebar to capture this.]
+1. Click **eBuy** under Opportunities in the sidebar. The eBuy opportunities table loads.
+2. The table displays the following columns:
 
-## **Browsing Forecasts**
+| Column | Description |
+| --- | --- |
+| **Title** | The opportunity name. |
+| **NAICS Code** | The SIN/NAICS code for this opportunity. |
+| **Buyer** | The government agency posting the request. |
+| **Notice ID** | The unique eBuy identifier. The prefix indicates the type: **RFP** (Request for Proposal), **RFQ** (Request for Quote), **RFI** (Request for Information). |
+| **Date** | The posting date. |
 
-- Click **"Forecasts"** in the sidebar. The forecast table loads.
-- Each row shows: **Agency** (who is planning the procurement), **Description** (what they plan to buy), **Estimated Value** (the expected contract value range, such as \$20M–\$50M), **Anticipated Quarter** (when they expect to release the solicitation, such as Q4 FY2025), and **Status** (Active or Archive).
-- If the **Status** column says "Archive," the anticipated release date has already passed. That means the forecast has likely turned into an opportunity on [**SAM.gov**](http://SAM.gov) or has already been awarded.
-- Click on any forecast row to open the **detail page** with **agency contacts, NAICS codes, timeline, and any additional notes**.
+3. Click on any row to open the full opportunity detail page.
 
-[INSERT IMAGE: The forecast table showing columns for Agency, Description, Estimated Value, Anticipated Quarter, and Status. Capture the table with several rows visible, including both Active and Archive entries if possible.]
+## Viewing eBuy opportunity details
 
-## **Forecast Detail Page**
+1. From the eBuy table, click on any opportunity row.
+2. The detail page has the following tabs:
 
-- From the forecast table, click any row.
-- The **detail page** opens with the full information: **agency, description, estimated value, anticipated quarter, NAICS code**, and any **agency-published notes or contacts**.
-- Review this information to decide whether this **future opportunity** is worth pursuing.
+| Tab | Contents |
+| --- | --- |
+| **Details** | Opportunity metadata: title, NAICS code, buyer, notice ID, dates, and point of contact. |
+| **Description** | Full solicitation text. |
+| **Keywords** | AI-extracted relevant terms from the solicitation. |
+| **Partners Ranking** | How your teaming partners rank against this opportunity's requirements. |
+| **Documents** | Attached solicitation files from the buyer. |
+| **Requirements** | AI-extracted compliance items from the solicitation. |
+| **Similar Opportunities** | Other opportunities the AI has identified as matching this one. |
+| **Proposal Outline** | AI-generated proposal structure tailored to this opportunity. |
+| **Submission Requirements** | Deadlines and submission instructions. |
 
-[INSERT IMAGE: A forecast detail page showing all fields for a single forecast. Click into a specific forecast and capture the full detail view.]
+3. To return to the eBuy table, click the back arrow or use the sidebar navigation.
 
-## **Calendar View**
+## Related topics
 
-- On the Forecasts page, switch to the **Calendar view** using the **view toggle**.
-- Navigate to any **month or date range** using the calendar controls.
-- The calendar shows which forecasts are expected to be released in each time period.
-- Click on any **date block** to see the forecasts scheduled for that period.
+- [Tracking Government Opportunities](/TrackOpportunities) — SAM.gov and custom opportunities.
+- [Proposal Generation](/ProposalGeneration) — Generating proposals from eBuy opportunities.
+- [Awards](/Version-2/Awards) — Viewing contracts that have already been awarded.
+- [Forecasts](/Version-2/Forecasts) — Planned future procurements.
 
-[INSERT IMAGE: The forecast calendar view with dates highlighted where procurement releases are anticipated. Switch to Calendar view and capture a month showing forecast dates.]
-
-## **AI Chat for Forecasts**
-
-Works the same as **Awards AI Chat**, but queries **forecast data**.
-
-- Open the **AI Chat** within the Forecasts section.
-- Type a question about **upcoming procurements**. Examples:\
-  — "What are the upcoming forecast opportunities for **EDI systems**?"\
-  — "Show me **Department of State** procurements expected in Q4."\
-  — "Which agencies are planning to award contracts over **\$10M** in the next year?"\
-  — "List forecast opportunities related to **cloud computing services**."
-- Press **Enter** or click **Send**. The AI queries the **forecast database** and returns results.
-
-[INSERT IMAGE: The Forecast AI Chat showing a question and AI response. Open the AI Chat in Forecasts, ask a question, and capture the response.]
-
-## **Research for Forecasts**
-
-Works exactly like **Awards Research**. You can **schedule recurring queries** (daily, weekly, monthly, yearly) to automatically track specific **forecast topics**. Results are saved by date and can be **compared or downloaded** as **Word, Excel, or CSV**.
-
-## **Projects for Forecasts**
-
-Works exactly like **Awards Projects**. Create a **scoped environment** with an **instruction** (e.g., "Only focus on Department of Housing forecasts") and optional **file uploads**. All chats within the project stay within that context.
+**Parent topic:** [Kontratar v2.0 Documentation](/)

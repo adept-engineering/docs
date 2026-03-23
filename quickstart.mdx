@@ -1,221 +1,101 @@
 ---
+description: "This guide covers account creation, initial workspace configuration, and basic navigation of the Kontratar dashboard. After completing these steps, you will be able to view and track government contract opportunities."
 title: "Quick Start"
 ---
 
-### System Requirements
+<Info>
+  **Before you begin**
 
-- Supported browsers - Chrome 64+, Edge 79+, Firefox 67+, Opera 51+, Safari 12+.
-- Minimum server requirements (if self-hosted).
-- Recommended network speed.
+  You need the following to create an account:
 
-### Installation setup
+  - A work email address. Personal email addresses (Gmail, Yahoo, Outlook.com) are not accepted.
+  - Your company's legal name, domain, and mailing address.
 
-- Step-by-step guide for deploying the application (if applicable).
-- Environment setup (e.g, environment variables for database and AI SDK) - The environment variables needed are:
+  Only one person per company can register through the signup page. That person becomes the primary admin. All other users must be invited by the primary admin.
+</Info>
 
-```
-DATABASE_URL=
-AUTH_SECRET= 
-OPENAI_API_KEY=
-SENTRY_AUTH_TOKEN=
-AUTH_URL=
-NEXT_PUBLIC_AUTH_URL=
-AUTH_TRUST_HOST=true
-NEXT_PUBLIC_SITE_URL=
+## Creating an account
 
-NEXT_PUBLIC_STRIPE_PUBLIC_KEY=
-STRIPE_SECRET_KEY=
+To create a new Kontratar account:
 
-SECRET_KEY=
+1. Go to [app.kontratar.com](https://app.kontratar.com).
+2. Click **Log In**, then select **Sign Up**.
 
-NEXT_PUBLIC_APP_MODE=   # Possible values: 'saas' or 'standalone'
+![Kontratar login page](images/Screenshot\(146\).png)
 
-GITHUB_TOKEN=
-NEXT_PUBLIC_POSTHOG_KEY=
-NEXT_PUBLIC_POSTHOG_HOST=
-NODE_ENV = 
+3. Enter your company details.
 
+![Kontratar registration form](images/Screenshot\(147\).png)
 
-NEXT_PUBLIC_SAM_API=
+The registration form requires the following company information:
 
-ELK_URL = 
-ELK_PWD = 
-ELK_USERNAME = 
+| Field | Description |
+| --- | --- |
+| Company name | Your organization's legal or operating name. |
+| Company domain | Your company's website domain (for example, `skyrimtech.com`). This domain must not already be registered in Kontratar. |
+| Address | Your company's street address. |
+| Country | Country of registration. |
+| State | State or province. |
+| City | City. |
+| ZIP code | Postal or ZIP code. |
 
-# API gateway
-NEXT_PUBLIC_API_URL=
-NEXT_PUBLIC_OPP_URL=
-NEXT_PUBLIC_PYTHON_URL=
-NEXT_PUBLIC_IS_URL=
+4. Enter your personal details.
 
-# NEXT_PUBLIC_API_URL=
-# NEXT_PUBLIC_OPP_URL=
+| Field | Description |
+| --- | --- |
+| First name | Your given name. |
+| Last name | Your surname. |
+| Email address | A work email that matches your company domain. |
+| Password | A password for your Kontratar account. |
 
-NEXT_PUBLIC_VAPID_PUBLIC_KEY=
-VAPID_PRIVATE_KEY=
+5. Click **Submit**.
 
-GOOGLE_AUTH_CLIENT_ID=
-GOOGLE_AUTH_CLIENT_SECRET=
+If the registration is successful, your account is created and you are logged in. You become the primary admin for your organization.
 
-SHAREPOINT_CLIENT_ID=
-SHAREPOINT_CLIENT_SECRET=
-CLIENT_ID=
+<Warning>
+  **Registration will fail if:**
 
-# SHAREPOINT_SITE_ID=""
-STRIPE_WEBHOOK_SECRET=
-DISCORD_WEBHOOK_URL=
-```
+  - The email address is not a work email.
+  - The company domain has already been registered by another user.
+  - A personal email provider is used (Gmail, Yahoo, etc.).
 
-### Quick Start
+  If your company domain is already registered, contact your organization's primary admin to request an invitation. See [Administrator Workspace](/AdministrationWorkspace) for instructions on inviting users.
+</Warning>
 
-- Logging in or setting up an account:
-- From the home page, click “Log In”.
-- If you have an account, enter your email address and password and log in.
+## Navigating the dashboard
 
-![Screenshot(146) Pn](/images/Screenshot\(146\).png)
+After logging in, the Home Dashboard is displayed. The dashboard shows:
 
-- If you do not have an account, select the Sign Up option to be directed to the account registration page.
+- **Charts and visualizations** — A summary of government contract activity filtered by your selected NAICS codes.
+- **Opportunity count** — The number of active opportunities matching your filters, organized by agency.
+- **Awards and forecasts** — Data on recent contract awards and forecasted procurement activity.
 
-### Enter Company Details
+The left sidebar provides access to all platform features:
 
-Fill in the following company information:
+| Sidebar item | Function |
+| --- | --- |
+| **Home** | Displays the main dashboard with summary charts and metrics. |
+| **Opportunities** | Lists government contract opportunities from SAM.gov and custom sources. Contains two tabs: **SAM** and **Custom**. |
+| **My Desk** | Shows opportunities you have tracked, with options to generate proposals or discard items. Contains three tabs: Available Opportunities, Tracked Opportunities, and Discarded Opportunities. |
+| **Team Simulation** | Tests how well your organization or a teaming partner aligns with a specific opportunity's requirements. |
+| **Documents** | Stores company files used during proposal generation (past performance narratives, capability statements, resumes). |
+| **Categories** | Manages classification tags applied to documents and partner profiles. |
+| **Administrator** | Organizational management panel for users, partners, teams, agencies, and settings. Visible only to Super Admins and Tenant Admins. |
+| **Settings** | Configures NAICS codes, notification preferences, and display options. |
+| **Proposal Generation** | Creates AI-generated proposals from tracked opportunities. |
 
-![Screenshot(147) Pn](/images/Screenshot\(147\).png)
+## What to do next
 
-- Company name
-- Company domain
-- Address (street address)
-- Country
-- State
-- City
-- ZIP code
+After your account is set up:
 
-### Enter Personal Details
+- **Configure your NAICS codes** — Go to **Settings** or the **Administrator \> NAICS Code** section to add the NAICS codes that match your business. These codes control which opportunities appear in your dashboard and Opportunities tab.
+- **Upload company documents** — Go to **Documents** and upload files that describe your organization's capabilities. These files are used by the AI during proposal generation. Recommended document types include past performance narratives, capability statements, and key personnel resumes.
+- **Track an opportunity** — Go to **Opportunities**, browse or filter the listings, and click **Track** on any opportunity you want to pursue. Tracked opportunities appear in **My Desk**.
+- **Invite your team** — If you are the primary admin, go to **Administrator \> Users** to invite other members of your organization.
 
-Provide your personal information:
+## Related topics
 
-- First name
-- Last name
-- Email address (must be a work email)
-- Password
-
-### Complete Registration
-
-To complete the signup process, click the 'Submit' button.
-
-## Account Creation Requirements
-
-Your account will be successfully created only if these conditions are met:
-
-### Email Requirements
-
-- Must use a work email address (not a personal email).
-
-### Domain Restrictions
-
-- The work domain (e.g., **skyrimtech.com**)  must not have been registered before.
-- Only one person per company can sign up through the registration page.
-- The primary admin must invite additional team members.
-
-<Note>
-  ### Important Notes
-
-  - The first person to register from a company becomes the primary admin
-  - All other employees from the same company must receive invitations from the primary admin
-  - Personal email addresses (Gmail, Yahoo, etc.) are not accepted
-  - Click sign up, and your account will be created if it satisfies all the following conditions:
-  - The email address used must be a work email.
-  - The work domain (e.g. adeptengr.com) must not have been registered before. i.e., Only one person from a company can sign up from the sign-up page; the primary admin will invite others.
-</Note>
-
-### Main Dashboard Overview
-
-The main dashboard provides comprehensive access to all platform features and tools. Here's what you can access:
-
-## Core Features
-
-### Home
-
-Your central command center featuring:
-
-- Interactive charts and visualizations.
-- Summary of opportunities, awards, and forecasts.
-- Data filtered by your selected NAICS codes.
-- Key performance metrics at a glance.
-
-### Opportunities (SAM/CUSTOM)
-
-Complete opportunity management hub where you can:
-
-- View opportunities from each government agency.
-- Filter by your tracked NAICS codes.
-- Track specific opportunities of interest.
-- Discard unwanted opportunities.
-- Users can also generate proposals from SAM and Custom opportunities.
-- Access detailed information for each opportunity.
-
-## Workspace Tools
-
-### Team Simulation
-
-- Analyzes your organization's fit based on opportunity requirements.
-- Compares your capabilities with those of other partners.
-- Helps you select the most suitable team or collaborator for a given contract.
-
-Each opportunity may have its own set of requirements (e.g., _“Proposal should not exceed 12 pages”_), and the simulation will check how well you meet those criteria.
-
-### Settings
-
-Customize your workspace experience:
-
-- Adjust workspace-specific preferences.
-- Configure notification settings.
-- Manage display options.
-
-### My Desk
-
-Your personal opportunity management center:
-
-- View all tracked opportunities.
-- Review discarded opportunities.
-- Organize and prioritize your pipeline.
-
-### Administrator
-
-Comprehensive organizational management (admin access required):
-
-- Manage user accounts and permissions.
-- Oversee partner relationships.
-- Organize teams and assign roles.
-- Monitor proposal submissions across your organization.
-
-### Documents
-
-Centralized document management system:
-
-- Upload company documents and templates.
-- Organize files by category or project.
-- Access shared organizational resources.
-- Maintain version control.
-
-### Proposal Generation
-
-Streamlined proposal creation and editing:
-
-- Create new proposals for opportunities.
-- Edit and refine existing proposals.
-- Collaborate with team members.
-- Track proposal status and submissions.
-
-### Categories
-
-Users can assign categories to documents to:
-
-- Organize files efficiently.
-- Enable search and filtering.
-- Group related content under custom or predefined labels.
-- Streamline proposal and content management within the workspace.
-
-### **Support Icon**
-
-The Support icon at the bottom right of the screen provides quick access to help resources. From here, users can explore available features, view product documentation, or contact customer support for assistance.
+- [Tracking Government Opportunities](/TrackOpportunities) — How to browse, filter, and track opportunities from SAM.gov and custom sources.
+- [Proposal Generation](/ProposalGeneration) — How to generate AI-powered proposals from tracked opportunities.
+- [Administrator Workspace](/AdministrationWorkspace) — How to manage users, partners, teams, and organizational settings.
+- [Payment & Subscription](/PaymentSubscription) — How to subscribe to a Kontratar plan and manage billing.

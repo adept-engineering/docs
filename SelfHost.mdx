@@ -1,175 +1,167 @@
 ---
 title: "Self-Hosting User Guide"
-description: "Welcome to the Kontratar Self-Hosting Guide. This documentation is designed to walk you through setting up your own private instance of the Kontratar platform. It covers prerequisites, environment configuration, security, installation, and deployment."
+description: "How to deploy, configure, and maintain a private instance of Kontratar on your own infrastructure."
 ---
 
-## Requirements
+This guide covers the installation, configuration, and maintenance of a self-hosted Kontratar instance. Self-hosting is intended for organizations that require a private deployment on their own infrastructure rather than using the Kontratar SaaS platform.
 
-Before starting, ensure your environment meets the following:
+## System requirements
 
-### System Requirements
-
-- OS: Linux, macOS, or Windows with WSL
-- RAM: Minimum 8 GB
-- Disk: 10 GB free. The key requirement is for the system to support both Linux and Docker.
-
-### Software Requirements
-
-- Docker & Docker Compose installed.
-- Python 3.8\+.
-- Git.
-- Liquibase (For Database Configuration Setup).
-- Internet access.
-
----
+| Requirement | Minimum specification |
+| --- | --- |
+| **Operating system** | Linux, macOS, or Windows with WSL |
+| **RAM** | 8 GB |
+| **Disk space** | 10 GB free |
+| **Docker** | Docker and Docker Compose installed |
+| **Python** | 3.8 or later |
+| **Git** | Installed |
+| **Liquibase** | Installed (used for database schema configuration) |
+| **Network** | Internet access required for installation |
 
 ## Prerequisites
 
-### 1. Database Setup
+Before starting the installation, prepare the following:
 
-- A running PostgreSQL database (self-hosted or cloud e.g., AWS RDS).
-- SSL certificate (`.crt`) to verify DB connection.
+### 1. Database
 
-### 2. SMTP Setup
+A running PostgreSQL database (self-hosted or cloud-based, for example AWS RDS). You will need:
 
-- SMTP credentials for sending notification emails (optional but recommended).
+- Database host, username, and password
+- An SSL certificate (`.crt` file) for verifying the database connection
+
+### 2. SMTP (optional)
+
+SMTP credentials for sending notification emails. While optional, SMTP is recommended for full platform functionality.
 
 ### 3. Redis
 
-- Redis host and credentials (cloud-based or self-hosted).
+A Redis instance (cloud-based or self-hosted). You will need the host address, port, and password.
 
-### 4. Domain Name
+### 4. Domain name
 
-- A domain name requires a certificate to verify the domain connection.
+A registered domain name for your self-hosted instance. You will need a TLS/SSL certificate to verify the domain connection.
 
----
+## Installation
 
-## Installation Steps
+### Step 1: Download the installer
 
-### 1. Download the Installer
-
-```
+```bash
 git clone https://github.com/your-org/kontratar-installer.git
 cd kontratar-installer
-
-# Please note the actual link would be updated later. 
 ```
 
-### 2. Make the Installer Executable (Linux/macOS)
+<Note>
+  The repository URL above is a placeholder. The actual URL will be provided during your onboarding process.
+</Note>
 
-```python
+### Step 2: Make the installer executable (Linux/macOS)
+
+```bash
 chmod +x install.py
 ```
 
-### 3. Run the Installer
+### Step 3: Run the installer
 
-```python
+```bash
 python3 install.py
 ```
 
-You will be prompted to enter:
+The installer prompts you for the following information:
 
-- Base port for the application (e.g. 3000).
-- Domain name for the self-hosted app (e.g. example.yourdomain.com) and optional SSL cert path.
-- PostgreSQL host, user, password, SSL cert path.
-- Redis host, port, and password.
-- SMTP host, user, password, port.
+| Prompt | Description |
+| --- | --- |
+| **Base port** | The starting port for the application (for example, 3000). All services are offset from this port. |
+| **Domain name** | The domain for your self-hosted instance (for example, `example.yourdomain.com`). Optionally provide an SSL certificate path. |
+| **PostgreSQL credentials** | Host, username, password, and SSL certificate path. |
+| **Redis credentials** | Host, port, and password. |
+| **SMTP credentials** | Host, username, password, and port. |
 
-The installer will:
+### What the installer does
 
-- Dynamically authenticate and access the Docker registry.
-- Download and run Liquibase schema setup.
-- Generate an `.env` file for environment variables.
-- Create a `docker-compose.yml` file with dynamic port mapping.
-- Pull and run all required containers.
+The installer performs the following actions:
 
----
+1. Authenticates and accesses the Docker registry.
+2. Downloads and runs the Liquibase database schema setup.
+3. Generates an `.env` file with your environment variables.
+4. Creates a `docker-compose.yml` file with port mappings based on your base port.
+5. Pulls and runs all required containers.
 
-## 🔄 Port Mapping
+## Port mapping
 
-All services are offset from your base port (e.g., 3000):
+All services are offset from your base port. For example, if your base port is 3000:
 
-| Service             | Port Offset | Final Port |
-| ------------------- | ----------- | ---------- |
-| Frontend            | \+0         | 3000       |
-| Auth Service        | \+1         | 3001       |
-| Opps Controller     | \+2         | 3002       |
-| SAM Data Feed       | \+3         | 3003       |
-| SAM to Repository   | \+4         | 3004       |
-| Opportunity Service | \+5         | 3005       |
-| Award Repository    | \+6         | 3006       |
-| Information Service | \+7         | 3007       |
-| API Gateway         | \+8         | 3008       |
+| Service | Port offset | Final port |
+| --- | --- | --- |
+| Frontend | \+0 | 3000 |
+| Auth Service | \+1 | 3001 |
+| Opps Controller | \+2 | 3002 |
+| SAM Data Feed | \+3 | 3003 |
+| SAM to Repository | \+4 | 3004 |
+| Opportunity Service | \+5 | 3005 |
+| Award Repository | \+6 | 3006 |
+| Information Service | \+7 | 3007 |
+| API Gateway | \+8 | 3008 |
 
----
+Record these ports for reference when verifying service health or troubleshooting.
 
-It is essential to note these ports, so that we understand where each service of the containers would be running.
+## Accessing your instance
 
-## 🔗 Accessing Your App
+After the containers are running, access Kontratar at:
 
-Once containers are running, access the kontratar platform through:
-
-```url
+```text
 https://<your-domain>:<base-port>
 ```
 
-You can verify service health with:
+### Verifying service health
 
 ```bash
-curl https://<your-domain>:3001/api/checkalive       # Auth service and other services
-curl https://<your-domain>:3008/api/gateway/checkalive # Specific for api service          
+curl https://<your-domain>:3001/api/checkalive        # Auth service
+curl https://<your-domain>:3008/api/gateway/checkalive # API Gateway
 ```
 
-You can run the following to verify containers:
+### Verifying running containers
 
 ```bash
-docker ps                 # List running containers
-docker logs <container>  # Inspect logs
+docker ps                  # List running containers
+docker logs <container>    # View logs for a specific container
 ```
 
----
+## Maintenance
 
-## Maintenance & Troubleshooting
+### Restarting all services
 
-### Restarting Services
-
-```
+```bash
 docker-compose down && docker-compose up -d
 ```
 
-### Checking Logs
+### Viewing service logs
 
 ```bash
 docker-compose logs -f <service_name>
 ```
 
-### Check Container Logs
+### Updating environment configuration
 
-```
-docker-compose logs -f <service_name>
-```
+Edit the `.env` file, then restart:
 
-### Updating Environment
-
-Edit `.env` And re-run:
-
-```
+```bash
 docker-compose up -d --build
 ```
 
-### Re-running the Installer
+### Reinstalling with new configuration
 
-To change configs completely, stop the running services with
+To reconfigure from scratch:
 
-```
+```bash
 docker-compose down
-```
-
-And then delete `.env` and `docker-compose.yml`:
-
-```
 rm .env docker-compose.yml
 python3 install.py
 ```
 
-Thank you for choosing Kontratar.
+## Related topics
+
+- [Quick Start](/quickstart) — Account creation and workspace configuration (applies to both SaaS and self-hosted instances).
+- [Administrator Workspace](/AdministrationWorkspace) — Organizational management after installation.
+- [FAQ](/FAQs) — Common questions about Kontratar.
+
+**Parent topic:** [Kontratar v1.2 Documentation](/)
