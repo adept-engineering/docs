@@ -13,13 +13,17 @@
     "light": "/logo/logo.png",
     "dark": "/logo/logo.png"
   },
+  "styling": {
+    "eyebrows": "breadcrumb",
+    "codeblocks": "system",
+    "fontSize": "sm"
+  },
   "background": {
     "color": {
       "light": "#ffffff",
       "dark": "#011f2d"
     }
   },
-  "css": "/custom.css",
   "navbar": {
     "links": [
       {
@@ -110,4 +114,4 @@
       }
     ]
   }
-}
+}}
