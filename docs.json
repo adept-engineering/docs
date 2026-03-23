@@ -53,40 +53,24 @@
   "navigation": {
     "versions": [
       {
-        "version": "2.0",
-        "groups": [
-          {
-            "group": "What's New",
-            "pages": ["Version-2/whats-new-v2"]
-          },
-          {
-            "group": "Market Intelligence",
-            "pages": [
-              "Version-2/Awards",
-              "Version-2/Forecasts",
-              "Version-2/eBuy-Opportunities"
-            ]
-          },
-          {
-            "group": "Business Development",
-            "pages": [
-              "Version-2/Pipeline-Management",
-              "Version-2/Campaigns"
-            ]
-          }
-        ]
-      },
-      {
         "version": "1.2",
         "groups": [
           {
             "group": "Overview",
-            "pages": ["Overview", "FeaturesofKontratar", "BenefitsOfKontratar"]
+            "pages": [
+              "Overview",
+              "FeaturesofKontratar",
+              "BenefitsOfKontratar"
+            ]
           },
           {
             "group": "Get Started",
             "icon": "play",
-            "pages": ["quickstart", "User-guide", "PaymentSubscription"]
+            "pages": [
+              "quickstart",
+              "User-guide",
+              "PaymentSubscription"
+            ]
           },
           {
             "group": "Core Features",
@@ -106,15 +90,49 @@
           },
           {
             "group": "Security & Compliance",
-            "pages": ["securityCompliance/passphrase", "securityCompliance/twofactor"]
+            "pages": [
+              "securityCompliance/passphrase",
+              "securityCompliance/twofactor"
+            ]
           },
           {
             "group": "Self-Hosting",
-            "pages": ["SelfHost"]
+            "pages": [
+              "SelfHost"
+            ]
           },
           {
             "group": "Support",
-            "pages": ["Maintenanceandsupport", "FAQs"]
+            "pages": [
+              "Maintenanceandsupport",
+              "FAQs"
+            ]
+          }
+        ]
+      },
+      {
+        "version": "2.0",
+        "groups": [
+          {
+            "group": "What's New",
+            "pages": [
+              "Version-2/whats-new-v2"
+            ]
+          },
+          {
+            "group": "Market Intelligence",
+            "pages": [
+              "Version-2/Awards",
+              "Version-2/Forecasts",
+              "Version-2/eBuy-Opportunities"
+            ]
+          },
+          {
+            "group": "Business Development",
+            "pages": [
+              "Version-2/Pipeline-Management",
+              "Version-2/Campaigns"
+            ]
           }
         ]
       }
