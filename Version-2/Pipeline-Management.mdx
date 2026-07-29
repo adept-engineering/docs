@@ -3,61 +3,99 @@ title: "Pipeline Management"
 description: "How to track opportunities through the 8-stage government capture management lifecycle using the Pipeline dashboard and funnel."
 ---
 
-**The Pipeline** tracks opportunities through a structured 8-stage business development lifecycle. It mirrors the standard federal government capture management process. The Pipeline connects forecasts, opportunities, and awards into a single view with charts and links at every stage.
+**The Pipeline** tracks opportunities through a structured 8-stage business development lifecycle. It mirrors the standard federal government capture management process, and it connects forecasts, opportunities, and awards into a single view.
+
+In version 2.0 the Pipeline does something new. It matches your pipeline records against the awards already in Kontratar and checks whether the work has been awarded, and if so, whether it was awarded to you.
 
 **How to get there:** Sidebar → Click **Pipeline** → This expands to show **Dashboard** and **Funnel**
 
-## The 8 pipeline stages
+## 1. The 8 pipeline stages
 
 | Stage | Name | What happens |
-| --- | --- | --- |
-| 1 | **Market Identification** | Identifying relevant markets, agencies, and procurement trends. Deciding which sectors to pursue. |
-| 2 | **Long-Term Positioning** | Building agency relationships, attending industry days, and positioning your company as a known entity. |
-| 3 | **Opportunity ID & Qualification** | Identified a specific opportunity and making the bid or no-bid decision. |
-| 4 | **Capture Planning** | Developing your win strategy, identifying teaming partners, and understanding how the government will evaluate proposals. |
-| 5 | **Proposal Planning** | Outlining the proposal structure, assigning writers, and setting internal deadlines. |
-| 6 | **Proposal Development** | Write, review, and refine the proposal content. |
-| 7 | **Submission & Negotiation** | Submitted the proposal and handled any government clarification requests or negotiations. |
-| 8 | **Contract Award & Management** | Win the contract and manage execution and performance. |
+| :-- | :-- | :-- |
+| **1** | **Market Identification** | Identifying relevant markets, agencies, and procurement trends. Deciding which sectors to pursue. |
+| **2** | **Long-Term Positioning** | Building agency relationships, attending industry days, and positioning your company as a known entity. |
+| **3** | **Opportunity ID & Qualification** | Identifying a specific opportunity and making the bid or no-bid decision. |
+| **4** | **Capture Planning** | Developing your win strategy, identifying teaming partners, and understanding how the government will evaluate proposals. |
+| **5** | **Proposal Planning** | Outlining the proposal structure, assigning writers, and setting internal deadlines. |
+| **6** | **Proposal Development** | Writing, reviewing, and refining the proposal content. |
+| **7** | **Submission & Negotiation** | Submitting the proposal and handling any government clarification requests or negotiations. |
+| **8** | **Contract Award & Management** | Winning the contract and managing execution and performance. |
 
-## Using the Pipeline Dashboard
+<Tip>
+  Stages 1 and 2 are where [Forecasts](/Version-2/Forecasts) earns its place. Both happen months before a solicitation exists. If every record in your pipeline enters at Stage 3, you are finding work at the same moment as everyone else bidding on it.
+</Tip>
 
-**How to get there:** Pipeline → Click **Dashboard**
+## 2. Using the Pipeline dashboard
 
-1. Click **Dashboard** under Pipeline in the sidebar.
-2. The top of the page shows four metric cards:
+The dashboard gives you the state of your pipeline at a glance.
 
-| Metric | Description |
-| --- | --- |
-| **Total Records** | Total opportunities in your pipeline across all stages. |
-| **Active** | Opportunities currently being pursued (not yet won or lost). |
-| **Won** | Opportunities that resulted in a contract award. |
-| **Win Rate** | Percentage of pipeline opportunities that resulted in a win. |
+| Card | What it counts |
+| :-- | :-- |
+| **Total Records** | Every opportunity in your pipeline, at any stage. |
+| **Active** | Opportunities you are currently pursuing. |
+| **Won** | Pursuits matched to an award where your organization is the recipient. |
+| **Win Rate** | Won as a percentage of the opportunities you pursued. |
 
-3. Below the metrics, a funnel chart shows how many opportunities sit at each of the 8 stages along with the combined dollar value per stage.
-4. Use this view to identify bottlenecks. For example, if many opportunities are at Capture Planning but few are progressing to Proposal Development, that stage needs attention.
+Below the cards, the **Pipeline Funnel** chart shows opportunity count and value by stage, so you can see where your pursuits are bunching up.
 
-## Managing pipeline records
+<Warning>
+  **Won, Win Rate, and the funnel chart need a SAM UEI ID.** Without one set up for your organization, the dashboard shows `Charts unavailable, SAM UEI ID is required to calculate pipeline metrics`, and the Won and Win Rate cards show `N/A`.
 
-**How to get there:** Pipeline → Click **Funnel**
+  This is not a fault. Award matching works by comparing your pipeline against awarded contracts and checking who won. Kontratar cannot tell whether an award went to your organization if it does not know which organization you are.
 
-1. Click **Funnel** under Pipeline in the sidebar. This shows a table of all your pipeline records.
-2. The table has columns: Title, Agency, Stage, and Actions.
+  Total Records and Active still work, because those count your own records and do not depend on matching.
+</Warning>
 
-| Action | How to do it |
-| --- | --- |
-| **Add a record** | Click the **Create** button, or add an opportunity from any opportunity detail page in the Opportunities section. |
-| **Move to a different stage** | Click the **Actions** menu on a record's row and select the target stage. |
-| **Edit a record** | Click **Actions** → **Edit**. |
-| **Delete a record** | Click **Actions** → **Delete**. |
+## 3. Award matching
+
+This is the behaviour behind the Won and Win Rate figures, and it changes what your pipeline is telling you.
+
+Kontratar matches your pipeline records against the awards in the system. For each match it checks the recipient against your organization's SAM UEI ID.
+
+1. **Records are compared against the award database.** Each pipeline record is checked against awards in Kontratar using the identifiers they have in common.
+2. **The recipient is checked.** Where a matching award exists, Kontratar looks at who received it.
+3. **The pipeline updates.** Pursuits with no matching award stay on the pipeline as live work. Pursuits where your organization is the recipient count toward Won and feed the Win Rate.
+
+<Info>
+  **What this changes in practice.** Before this, a pipeline record sat wherever you last dragged it, whether or not the procurement had actually been decided. Records for work that had already been awarded to someone else stayed in Active until a person noticed and moved them.
+
+  Now the pipeline separates work still in play from work that has been decided. Your Active count means something, rather than slowly filling up with pursuits that ended months ago.
+</Info>
+
+<Note>
+  **A pursuit awarded to a competitor is matched, but it is not counted as won.** It stays visible so you can review what happened. Move it out of Active yourself if you track losses separately.
+</Note>
+
+## 4. Managing pipeline records
+
+Select **Funnel** from the Pipeline menu to see your records as a list.
+
+| Column | What it shows |
+| :-- | :-- |
+| **Title** | The opportunity title. |
+| **Agency** | The awarding agency. |
+| **Stage** | Which of the 8 stages the record is currently at. |
+| **Actions** | Controls for managing the record. |
+
+The search box above the table filters your records. Pagination controls sit underneath, with a row count on the left.
+
+### Example: moving a pursuit through the pipeline
+
+You spot a forecast for geospatial support services with a solicitation expected in eight months.
+
+1. Add it to the pipeline at **Stage 1**. You are still deciding whether this market is worth your time.
+2. Once you commit to the agency and start building the relationship, move it to **Stage 2**.
+3. When the solicitation is released, move it to **Stage 3** and make your bid or no-bid decision.
+4. If you bid, it moves through **Stages 4 to 7** as capture planning, proposal work, and submission happen.
+5. When the award is published, Kontratar matches it and resolves the outcome for you.
+
+The last step is the one you no longer do by hand. You do not have to go and check whether the contract was awarded, or remember to update the record afterwards.
 
 ## Related topics
 
-- [Tracking Government Opportunities](/TrackOpportunities) — Finding and tracking opportunities to add to your pipeline.
-- [Team Simulation](/TeamSimulation) — Evaluating organizational fit at the Opportunity ID & Qualification stage.
-- [Proposal Generation](/ProposalGeneration) — Generating proposals at the Proposal Development stage.
-- [Awards](/Version-2/Awards) — Viewing awarded contracts at the Contract Award stage.
-- [Forecasts](/Version-2/Forecasts) — Identifying future opportunities at the Market Identification stage.
-- [Campaigns](/Version-2/Campaigns) — Outreach to contracting officers at the Long-Term Positioning stage.
+- [Awards](/Version-2/Awards). The award data your pipeline records are matched against.
+- [Forecasts](/Version-2/Forecasts). Where Stage 1 and Stage 2 pursuits usually come from.
+- [Campaigns](/Version-2/Campaigns). How to run outreach supporting a pursuit in your pipeline.
 
-**Parent topic:** [Kontratar v2.0 Documentation](/)
+**Parent topic:** [Kontratar v2.0 Documentation](/Version-2/whats-new-v2)

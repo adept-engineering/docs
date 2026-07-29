@@ -3,46 +3,87 @@ title: "What's New in v2.0"
 description: "Version 2.0 introduces five new modules that extend Kontratar from opportunity tracking and proposal generation into a full-lifecycle government business development platform"
 ---
 
-## New modules
+Version 2.0 adds new modules for grants, forecasting, pipeline tracking, contractor research, and outreach campaigns. It also brings the AI research tools that started in Awards over to the Forecasts module.
+
+Everything you used before is still here. Nothing was migrated, and your saved records carry forward.
+
+## 1. New modules
 
 <CardGroup cols={1}>
-  <Card title="Awards" href="/Version-2/Awards">
-    Browse, filter, and analyze federal contract awards sourced from USAspending.gov. Includes award analytics, entity profiles, AI Chat, Projects, and scheduled reasearch.
+  <Card title="Grants" href="/Version-2/Grants">
+    Browse funding announcements from Grants.gov. Kontratar reads each announcement and pulls out the eligibility rules, the funding amount, and the list of application components, so you can rule a grant in or out without reading the full notice. You can also generate a draft grant proposal, and create your own records for state, foundation, and private funding that does not appear on Grants.gov.
   </Card>
 
   <Card title="Forecasts" href="/Version-2/Forecasts">
-    Browse planned future procurements that agencies have announced but not yet solicited. Includes calendar view, AI Chat, Projects, and scheduled Research.
-  </Card>
-
-  <Card title="eBuy Opportunities" href="/Version-2/eBuy-Opportunities">
-    View GSA Schedule opportunities from the eBuy portal alongside SAM.gov opportunities. Includes AI-extracted requirements, partner ranking, and proposal outlines.
+    Browse procurements that agencies have announced but not yet put out for bid. A forecast is the earliest point at which a requirement becomes visible, which gives you months of lead time before the solicitation is written. Includes a calendar view, AI Chat, Projects, and scheduled Research.
   </Card>
 
   <Card title="Pipeline Management" href="/Version-2/Pipeline-Management">
-    Track opportunities through an 8-stage capture management lifecycle with dashboard metrics, funnel visualization, and stage-by-stage management.
+    Track opportunities through an 8-stage capture management lifecycle. The dashboard reports how many pursuits you have, how many are active, and your win rate. The funnel shows the same records as a table you can search and sort by stage.
+  </Card>
+
+  <Card title="Contractors" href="/Version-2/Contractors">
+    Search the register of GSA Schedule holders. Each record shows the contract number, NAICS code, option period end date, and socio-economic status. Use it to find a teaming partner who already holds the schedule you need, or to see who else competes in your market.
   </Card>
 
   <Card title="Campaigns" href="/Version-2/Campaigns">
-    Create email templates and send bulk outreach to contracting officers and teaming partners. Includes attachment token personalization and a 21-day government email cooldown rule.
+    Create email templates and send outreach to contracting officers and teaming partners. Templates support tokens that fill in each recipient's name, company, contract, and expiry date, in the body and in attached documents. Kontratar enforces a 21-day gap between emails to the same government address.
   </Card>
 </CardGroup>
 
-## New AI capabilities
+## 2. New AI capabilities
 
-<CardGroup cols={1}>
-  <Card title="AI Chat for Awards and Forecasts" href="/Version-2/Awards#ai-chat-for-awards">
-    Query the awards and forecast databases in plain English. Ask questions and receive data-backed answers.
-  </Card>
+Three AI features are now available in both Awards and Forecasts. They work the same way in each module.
 
-  <Card title="Projects" href="/Version-2/Awards#projects">
-    Create scoped research workspaces with custom instructions and file uploads. The AI answers only within the context you define.
-  </Card>
+### AI Chat
 
-  <Card title="Scheduled Research" href="/Version-2/Awards#research">
-    Set up recurring AI queries that run daily, weekly, monthly, or yearly. Results are saved by date for trend comparison and can be exported as Word, Excel, or CSV.
-  </Card>
-</CardGroup>
+Ask a question in ordinary English and get the answer back as a table of records.
 
-## Changes from v1.2
+You do not build filters or write a query. Type something like "Show me all awards for Adept Engineering Solutions" and Kontratar reads the database and returns the matching rows. If you want the AI to take a document into account, attach it to the question. A capability statement or a list of target agencies both work.
 
-All features from v1.2 remain available.
+Every answer has three parts:
+
+1. **Reasoned.** A collapsed section. Open it to see how the AI understood your question before it searched. If a result looks wrong, check here first.
+2. **The results table.** Scroll sideways for columns that run past the edge. Copy and download controls sit above the top right corner of the table.
+3. **The summary.** A short paragraph saying what the records cover, including the exact date range the AI used. If you asked for "the last two years" and it picked the wrong window, this is where you will notice.
+
+### Projects
+
+A project is a research workspace with its own instructions and files.
+
+You write a set of standing instructions once, and every chat you start inside that project follows them. Say your instruction is "Only focus on Department of Agriculture awards." You then ask "What are the awards available today?" and you get Department of Agriculture awards back. You did not repeat the constraint in your question. The project applied it for you.
+
+You can also upload reference files to a project. Kontratar accepts PDF, CSV, Excel, and Word documents. Instructions and files work together, so a project scoped to one agency and loaded with your capability statement will filter to that agency and weigh the results against what you actually do.
+
+### Scheduled Research
+
+A scheduled research item is a question that runs on its own at a set interval.
+
+Pick daily, weekly, monthly, or yearly. Kontratar runs the query for you and files each result under the date it ran. Because the runs are stored separately rather than overwriting each other, you can open one research item and read last month's answer next to this month's. A normal search only shows you the current state, so this is the only way to see what changed.
+
+You can email the results to yourself or export them as Word, Excel, or CSV.
+
+## 3. Pipeline award matching
+
+Your pipeline records are now checked against the awards in Kontratar.
+
+When a pursuit sits in your pipeline, Kontratar compares it against the award database. If it finds a matching award, it checks the recipient against your organization's SAM UEI ID. Pursuits with no matching award stay on the pipeline as live work. Pursuits you won feed the Won and Win Rate figures on the dashboard.
+
+This is why the dashboard needs your UEI. Kontratar can see that a contract was awarded, but it has no way of knowing whether your organization was the winner unless it has your identifier to check against.
+
+<Warning>
+  **Pipeline metrics need a SAM UEI ID.** If your tenant does not have one set, the dashboard shows `Charts unavailable, SAM UEI ID is required to calculate pipeline metrics`, and the Won and Win Rate cards show `N/A`. Total Records and Active still work, because those count your own records and do not depend on matching.
+</Warning>
+
+## 4. What stays the same
+
+Opportunities, Proposals, Simulations, Documents, Categories, and Settings work the way they always did. There is no migration step, and the records you created in the previous version are still there.
+
+## Related topics
+
+- [Awards](/Version-2/Awards). How to browse, filter, analyze, and research federal contract awards.
+- [Forecasts](/Version-2/Forecasts). How to find procurements agencies have announced but not yet solicited.
+- [Pipeline Management](/Version-2/Pipeline-Management). How to track opportunities through the 8-stage capture lifecycle.
+- [Campaigns](/Version-2/Campaigns). How to send outreach emails to contracting officers and teaming partners.
+
+**Parent topic:** [Kontratar v2.0 Documentation](/Version-2/Awards)

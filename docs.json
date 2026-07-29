@@ -122,7 +122,10 @@
           {
             "group": "Market Intelligence",
             "pages": [
-              "Version-2/Awards"
+              "Version-2/Awards",
+              "Version-2/forecast",
+              "Version-2/grants",
+              "Version-2/contractors"
             ]
           },
           {

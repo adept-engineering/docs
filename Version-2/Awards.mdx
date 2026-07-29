@@ -5,178 +5,411 @@ description: "How to browse, filter, analyze, and research federal contract awar
 
 **Awards** are contracts that the federal government has already awarded to a company. The procurement cycle for these contracts is complete. Award data is sourced from USAspending.gov.
 
+The Awards module lets you search contracts that have already been awarded. It gives you tools for exploring contract ideas, researching companies, organizing your research, tracking expiring contracts, and analyzing award trends.
+
 Use the Awards module to:
 
 - Research which companies are winning contracts in your industry
 - Identify contracts approaching expiration for re-compete opportunities
 - Analyze award distribution by agency, NAICS code, set-aside type, and fiscal year
 - Build competitive intelligence on specific organizations
+- Ask questions of the award database in plain English instead of researching manually
 
 <Info>
-  **Awards vs. Opportunities vs. Forecasts**: Awards are completed procurements. Opportunities are active solicitations currently posted on SAM.gov or eBuy. Forecasts are planned future procurements not yet solicited. The typical lifecycle is: Forecast → Opportunity → Award.
+  **Awards vs. Opportunities vs. Forecasts:** Awards are completed procurements. Opportunities are active solicitations currently posted on SAM.gov. Forecasts are planned future procurements not yet solicited. The typical lifecycle is: Forecast → Opportunity → Award. The same requirement can appear in all three modules at different points in its life.
 </Info>
 
 **How to get there:** Sidebar → Click **Awards**
 
-## Browsing and filtering awards
+## The Awards workspace
+
+When you open Awards, the main Kontratar sidebar is replaced by the Awards rail. Everything on this page is reached from that rail.
+
+| Rail item | What it opens |
+| :-- | :-- |
+| **New Market Research Analysis** | A new AI Chat conversation. |
+| **Search chats** | Your previous conversations. |
+| **Projects** | Workspaces for organizing related searches. |
+| **Expiring Contracts** | Contracts approaching their expiration date. |
+| **Research** | Questions that run automatically on a schedule. |
+| **Favorite Contracts** | Awards you have bookmarked. |
+| **Analytics** | Award totals and trends for a fiscal year. |
+| **Entities** | Companies and organizations that hold federal contracts. |
+
+Your most recent conversations also appear under **Recents** at the bottom of the rail.
+
+## 1. Browsing and filtering awards
 
 1. Click **Awards** in the sidebar. The awards table loads with all indexed awarded contracts.
 2. Use the filter controls at the top of the table to narrow results.
 
 | Filter | Description |
-| --- | --- |
+| :-- | :-- |
 | **Agency** | The government agency that issued the award. |
 | **NAICS Code** | The industry classification of the awarded contract. |
 | **Date range** | Filter by award date, start date, or expiration date. |
 
 3. The table updates immediately after selecting filters.
-4. To clear filters, click the **X** on each filter tag or use the reset button.
 
-## Viewing award details
+<Tip>
+  Filter by expiration date rather than award date when you are looking for work you can bid on. The award date tells you when a competitor won. The expiration date tells you when the contract comes back up for competition.
+</Tip>
 
-1. In the awards table, click on any award row.
-2. The detail page displays the following fields:
+## 2. Viewing award details
 
-| Field | Description |
-| --- | --- |
-| **Award ID** | The unique identifier for this contract award. |
-| **Agency** | The government agency that issued the award. Clickable — links to agency-filtered results. |
-| **NAICS Code** | The industry classification code for this contract. |
-| **Award Date** | The date the contract was awarded. |
-| **Start Date** | The date contract performance begins. |
-| **End Date** | The date contract performance ends. |
-| **Expiration Date** | The date the contract expires. Used to identify re-compete timing. |
-| **Contract Value** | The total dollar value of the award. |
-| **Recipient** | The company that won the contract. Clickable — links to the Entity profile. |
+Click any award from the awards list, your search results, the analytics tables, or your favorites to open its detail page.
 
-## Favoriting awards
+| Field | What it shows |
+| :-- | :-- |
+| **Award ID** | The unique identifier for the award. |
+| **Agency** | The awarding agency. |
+| **NAICS Code** | The industry classification. |
+| **Dates** | Award date, start date, and end date. |
+| **Value** | The contract value. |
+| **Recipient** | The contractor that won the award. |
+| **Set-Aside** | Small business set-aside information, if any. |
+| **Place of Performance** | Where the work is carried out. |
+| **Description** | The contract description and scope. |
 
-1. In the awards table, click the **bookmark icon** on any award row. The icon changes to indicate the award has been saved.
-2. To view saved awards, navigate to the **Favorite Contracts** page within the Awards section.
-3. Click any bookmarked award to open its full detail page.
+The fields on this page are linked. Click the recipient to open that company's entity profile. Click the agency to see its other awards. Following those links is faster than running a fresh search every time you want to widen the picture.
 
-## Expiring contracts
+## 3. AI Chat
 
-The Expiring Contracts page shows awards approaching their contract expiration date for the current month. Expiring contracts are re-compete opportunities — when a contract expires, the government typically re-solicits the work.
+AI Chat lets you ask questions instead of researching manually through the awards list.
 
-**How to get there:** Awards → **Expiring Contracts**
+You can ask the AI to search for awards won by a specific company, and you can attach documents to support your question.
 
-1. Navigate to **Expiring Contracts** within the Awards section.
-2. The page displays all awards expiring in the current month.
-3. Use the filter controls to narrow results by agency, NAICS code, or contract type.
-4. Click any expiring contract to view its full award detail page.
+<Frame caption="A new conversation. Type your question in the box and click the arrow to send.">
+  ![Awards AI Chat showing a new conversation with an empty prompt box, an Attach button, and a character counter](/images/awards/ai-chat-new-conversation.png)
+</Frame>
 
-## Award analytics
+To ask a question:
 
-Analytics provides a visual summary of award activity for a selected fiscal year.
+1. Click **New Market Research Analysis** in the Awards rail.
+2. Type your question in plain English.
+3. To include a supporting document, click **Attach** and choose the file.
+4. Click the arrow button to send.
 
-**How to get there:** Awards → **Analytics**
+While the AI searches, you can watch it work. When it finishes, it returns the awards it found.
 
-1. Navigate to **Analytics** within the Awards section.
-2. The page defaults to the most recent fiscal year. Use the fiscal year selector to switch between years.
-3. The summary metrics at the top show:
+Questions that work well:
 
-| Metric | Description |
-| --- | --- |
-| **Total Awards Count** | Number of awards issued in the selected fiscal year. |
-| **Total Value** | Combined dollar value of all awards in the selected fiscal year. |
-| **Unique Recipients** | Number of distinct companies that received awards. |
+- Show me all awards for Adept Engineering Solutions
+- Give me the highest valued award
+- What awards were given to a named company?
+- Find awards in NAICS code 541511 over \$1 million
+- Which companies have won the most cybersecurity contracts?
+- Show me the contract history between the Department of the Army and a named company
 
-4. The **Top NAICS Codes** chart shows which industry sectors received the most awards.
-5. The **Set-Aside Distribution** chart shows the proportion of awards by set-aside type: No Set-Aside, Small Business Set-Aside, 8(a), HUBZone, and others.
-6. The **Top Awards by Value** table lists the highest-value contracts. Click the sort toggle to switch between ascending and descending order.
-7. Every award in the table is clickable. Every entity (company) name is also clickable and links to that organization's Entity profile.
+<Frame caption="The answer comes back as a table, with a written summary underneath explaining what the records cover.">
+  ![AI Chat result showing a Reasoned section, a table of award records, and a summary paragraph below](/images/awards/ai-chat-result-table.png)
+</Frame>
 
-## Entities
+The answer has three parts:
 
-Entities are the companies and organizations that receive federal awards. Every award is linked to the entity that won it.
+1. **Reasoned.** A closed section at the top. Open it to see how the AI understood your question before it searched. If an answer looks wrong, check here first.
+2. **The table.** The awards it found. Scroll sideways for columns that run past the edge. Copy and download buttons sit above the top right of the table.
+3. **The summary.** A short paragraph saying what the records cover, including the exact date range the AI used.
 
-### Viewing an entity profile
+Under the answer are buttons to copy it, play it as audio, share it, or run it again. You can also ask follow up questions to refine your search, and click any award in the results to open its full details.
 
-1. From any award detail page, click the **recipient name** link.
-2. The entity profile shows:
-   - Total number of awards the organization has received
-   - Total combined dollar value of all their awards
-   - **Recent Awards** — the entity's most recent contract awards in chronological order (each is clickable)
-   - Activity charts showing contracting trends over time
-   - **Top Agencies** — which agencies award the most to this entity
-   - **Top Recipients** — competitive context showing similar organizations
+<Note>
+  **Check the date range in the summary.** If you ask for something like "the last two years", the AI works out the actual dates and states them in the summary. If it chose a different window from the one you meant, just say so in your next message. The conversation remembers what you were discussing, so you do not need to start over.
+</Note>
 
-### Searching for entities
+### Continuing a previous conversation
 
-1. Navigate to the **Entity Search** page within the Awards section.
-2. Type a company or organization name into the search bar.
-3. Results update as you type. Click any entity name to open their full profile.
+Click **Search chats** in the Awards rail to see your earlier conversations. The most recent ones also appear under **Recents**.
 
-## AI Chat for awards
+Click any conversation to continue it, instead of starting a new chat every time. You can attach supporting documents to a conversation you have reopened, the same way you would in a new one.
 
-The AI Chat lets you query the awards database in plain English instead of filtering tables manually.
+## 4. Projects
 
-**How to get there:** Awards → **AI Chat**
+Projects help you organize related searches. A project holds a set of instructions and supporting files, and every chat you create inside that project uses them as context.
 
-1. Open **AI Chat** from within the Awards section.
-2. Type a question in the text input and press Enter.
-3. The AI queries the database and returns the answer. You can ask follow-up questions in the same conversation.
-
-Example questions:
-
-| Question | What it returns |
-| --- | --- |
-| "Show me all awards for Adept Engineering Solutions." | All awards where the recipient matches that name. |
-| "What are the most recent awards from the Department of Defense?" | DoD awards sorted by date. |
-| "Which companies received the most awards under NAICS code 541511?" | Ranked list of recipients for that NAICS code. |
-| "What is the total value of all awards in fiscal year 2024?" | Aggregated dollar value. |
-| "Give me the highest-valued award and tell me which agency issued it." | Single award with agency detail. |
-
-## Projects
-
-Projects let you create focused research workspaces with a specific instruction and optional file uploads. Every chat created inside a project is scoped to that instruction. The AI only answers within the context you defined.
-
-**How to get there:** Awards → **Projects**
+<Frame caption="The Projects page before you have created anything.">
+  ![Projects page showing an empty state with a folder icon, the message No projects found, and a New Project button](/images/awards/projects-empty-state.png)
+</Frame>
 
 ### Creating a project
 
-1. Navigate to **Projects** within the Awards section.
-2. Click **Create New Project**.
-3. Enter a **Project Name** (for example, "Department of Agriculture IT Awards").
-4. Write an **Instruction** that tells the AI what to focus on (for example, "Only focus on the Department of Agriculture" or "Analyze IT service contracts above \$1M").
-5. Optionally, upload supporting files. Supported formats: PDF, CSV, Excel (XLSX/XLS), Word (DOC/DOCX), TXT. These files become part of the AI's context for all chats in this project.
-6. Click **Save**.
+1. Click **Projects** in the Awards rail.
+2. Click **New Project**. The button in the top right and the one in the middle of the page do the same thing.
+3. Type a **Project Name**.
+4. Type a **Description** if you want one. This is optional.
+5. Click **Create Project**.
+
+<Frame caption="The Create a New Project form. Only the name is required.">
+  ![Create a New Project form with Project Name and Description fields, and Create Project and Cancel buttons](/images/awards/project-create-form.png)
+</Frame>
+
+Your project appears as a card showing its name and when it was last updated.
+
+<Frame caption="A project card.">
+  ![Projects page showing a project card with a name and a last updated timestamp](/images/awards/projects-list.png)
+</Frame>
+
+### Adding instructions and files
+
+Once the project exists, open it to set it up.
+
+**Instructions** tell the project how the research should keep going. Write them as plain sentences, for example `Only focus on Department of Agriculture awards`.
+
+**Supporting files** are documents you upload to help the search make sense. Kontratar accepts:
+
+- PDF documents
+- CSV files
+- Excel spreadsheets (.xlsx, .xls)
+- Word documents (.doc, .docx)
+
+<Info>
+  **What instructions do.** If your instruction is `Only focus on Department of Agriculture` and you then ask `What are the awards available today?`, you get Department of Agriculture awards back. You did not mention the agency in your question. The project applied the instruction for you.
+
+  Instructions and files work together. A project scoped to one agency and loaded with your capability statement will filter to that agency and weigh the results against what your company actually does.
+</Info>
 
 ### Using a project
 
-1. Open a saved project from the Projects list.
-2. Click **New Chat** to start a conversation thread.
-3. Type any question. The AI answers based only on the instruction you set and the files you uploaded.
-4. You can create multiple chat threads inside the same project. Each thread shares the same instruction and file context but maintains its own conversation history.
+Open the project and start a new chat inside it. Ask your questions as normal. Every chat in that project shares the same instructions and files, so you never have to restate the background.
 
-## Research
+### Editing and deleting a project
 
-Research lets you schedule an AI query to run automatically on a recurring basis. Each run's results are saved so you can compare them over time.
+Click the menu on a project card.
 
-**How to get there:** Awards → **Research**
+<Frame caption="The project card menu.">
+  ![Project card showing a menu with Edit project and Delete project options](/images/awards/project-card-menu.png)
+</Frame>
+
+| Option | What it does |
+| :-- | :-- |
+| **Edit project** | Change the name, description, instructions, or files. |
+| **Delete project** | Remove the project. |
+
+## 5. Expiring contracts
+
+This is one of the most useful features for organizations looking for future opportunities.
+
+As contracts approach their expiration dates, they often become candidates for re-competes. This page gives you a quick overview of upcoming contract expiration dates so you can prepare before the work comes back to market.
+
+<Frame caption="The Expiring Contracts Dashboard. Filters on the left, calendar on the right.">
+  ![Expiring Contracts Dashboard with summary cards, a filter panel, and a monthly calendar](/images/awards/expiring-dashboard.png)
+</Frame>
+
+Three cards sit across the top:
+
+| Card | What it counts |
+| :-- | :-- |
+| **BPA Contracts** | Active Blanket Purchase Agreements in the current results. |
+| **Delivery Orders** | Active delivery orders in the current results. |
+| **Expiring this Week** | Contracts reaching their expiration date in the next seven days. |
+
+### Filtering
+
+You can filter by agency, NAICS code, expiration date, or award type.
+
+<Frame caption="The Agency filter has a search box, so you can type instead of scrolling the whole list.">
+  ![Agency filter open showing a search box and an alphabetical list of federal agencies](/images/awards/expiring-filter-agency.png)
+</Frame>
+
+| Filter | How it works |
+| :-- | :-- |
+| **Personalized awards only** | A checkbox limiting results to awards matched to your organization. |
+| **Agency** | A searchable list of federal agencies. |
+| **NAICS Code** | Opens a window listing the NAICS codes your tenant subscribes to. |
+| **Expiring Date** | A **From** and **To** date pair, each with a calendar picker. |
+| **Award Type** | Checkboxes for BPA, BPA CALL, DCA, DEFINITIVE CONTRACT, DELIVERY ORDER, DO, PO, and PURCHASE ORDER. |
+| **Type of Set Aside** | Checkboxes for 8(A), BUY INDIAN, EDWOSB, HBCU, HUBZONE, INDIAN ECONOMIC, SMALL BUSINESS, DVOSB, and VETERAN OWNED SMALL BUSINESS. |
+
+<Frame caption="The NAICS Code window lists the codes your tenant subscribes to.">
+  ![Tenant NAICS Codes window with a search field, a list of subscribed codes, and Cancel and Done buttons](/images/awards/expiring-filter-naics-modal.png)
+</Frame>
+
+<Note>
+  **The NAICS filter only shows codes your tenant subscribes to.** If a code you expect is not in the list, it has not been subscribed yet. That is a Settings change rather than a problem with the filter.
+</Note>
+
+<Frame caption="Filters you have chosen appear as chips at the top of the panel. Each has an x to remove it.">
+  ![Filter panel showing a NAICS chip, From and To date fields, and Award Type checkboxes](/images/awards/expiring-filter-date-award-type.png)
+</Frame>
+
+When you have set your filters, click **Apply Filters** at the bottom of the panel. Click **Clear Filters** to start again.
+
+<Frame caption="Clear Filters and Apply Filters sit at the bottom of the panel.">
+  ![Filter panel scrolled to the set-aside checkboxes, above the Clear Filters and Apply Filters buttons](/images/awards/expiring-filter-set-aside.png)
+</Frame>
+
+<Warning>
+  **Nothing changes until you click Apply Filters.** This panel holds your choices until you apply them. If your filters seem to have no effect, this is usually why.
+</Warning>
+
+### Selecting a date
+
+The calendar on the right shows one month at a time, with month and year dropdowns above it. Coloured dots on a date show which award types expire that day. The legend under the calendar tells you which colour is which.
+
+Click any date to see the contracts expiring that day. They load into the panel below the calendar, headed with the full date and a count.
+
+Click any contract in that list to open its full details and identify whether it is worth pursuing as a re-compete.
+
+<Tip>
+  Monitor expiring contracts in your target agencies and NAICS codes on a regular schedule rather than now and then. A contract you find twelve months out is something you can prepare for. The same contract found six weeks out is a bid the incumbent will probably win.
+</Tip>
+
+## 6. Research
+
+Research lets you automate recurring AI queries instead of asking the same question over and over.
+
+You might ask something like `Where are the latest cloud computing contract awards?` and then schedule it to run automatically on a daily, weekly, monthly, or yearly basis.
+
+<Frame caption="The Research page lists your scheduled questions with their interval and date.">
+  ![Research page with a search box and a table showing Name, Prompt, Interval and Date columns](/images/awards/research-list.png)
+</Frame>
+
+This page is where you manage your schedules, review your research prompts, and view results.
 
 ### Scheduling a research query
 
-1. In the **AI Chat** within Awards, type the question you want to schedule (for example, "What are the latest awards for cloud computing services?").
+1. Write the question in AI Chat and check that it returns what you expect.
 2. Click **Schedule Research**.
-3. Choose a frequency: Daily, Weekly, Monthly, or Yearly.
-4. Enter a descriptive name (for example, "Cloud Awards Monthly Report").
+3. Choose how often it should run: Daily, Weekly, Monthly, or Yearly.
+4. Give it a name you will recognize later, for example `Cybersecurity Award Details`.
 5. Click **Save**.
+
+<Note>
+  **You schedule research from the chat, not from the Research page.** The Research page is for managing what you have already set up. To create a new one, ask the question in AI Chat first.
+</Note>
+
+### Managing a scheduled query
+
+Click any item in the list to work with it.
+
+| Action | What it does |
+| :-- | :-- |
+| **Edit** | Change the question, the name, or how often it runs. |
+| **View results** | Open the results of that research. |
+| **Send results to email** | Email the results to yourself. |
+| **Export** | Download the results as a Word document, an Excel spreadsheet, or a CSV file. |
+| **Delete** | Remove the scheduled research if you no longer want it. |
 
 ### Viewing research results
 
-1. Navigate to the **Research** page within Awards.
-2. Your scheduled research items are listed with their names and frequencies.
-3. Click any item to expand it. Results are organized by execution date.
-4. Compare results across dates to identify trends.
-5. Click the download button to export results as Word, Excel, or CSV.
+Clicking **View results** takes you to the results for that particular research.
+
+Results are organized by the date each run happened, so you can open one research item and read several runs in sequence. Comparing runs is how you spot a trend: what appeared, what dropped off, and what changed value between one date and the next.
+
+<Tip>
+  Match how often a question runs to how quickly the answer actually changes. Running a slow moving question daily fills your list with runs that all say the same thing, which makes real changes harder to spot.
+</Tip>
+
+## 7. Favorite contracts
+
+When you come across an award you want to revisit later, bookmark it here.
+
+To save an award, click the favourite button on any award in the awards list or in your search results. It is saved straight away.
+
+<Frame caption="The Favorite Contracts page. A summary across the top, and your saved contracts below.">
+  ![Favorite Contracts page showing four summary cards above a searchable table of saved contracts](/images/awards/favorite-contracts.png)
+</Frame>
+
+The cards across the top summarize everything you have saved:
+
+| Card | What it counts |
+| :-- | :-- |
+| **Saved Contracts** | Everything you have bookmarked. |
+| **Active Contracts** | Saved contracts that are still running. |
+| **Within 30 days** | Saved contracts expiring soon. |
+| **Blanket Purchase Agreements** | Saved contracts that are BPAs. |
+
+Below the summary you can search through your saved contracts. You can search by award ID, contract type, NAICS code, agency, or expiration date.
+
+Click any contract to view its details, including its history. Remove a contract from your favorites when you no longer need it.
+
+<Tip>
+  Treat the **Within 30 days** card as an alert rather than a number. If a contract you saved months ago has appeared there, your window to prepare a re-compete bid is nearly closed.
+</Tip>
+
+## 8. Analytics
+
+Analytics shows award trends across the whole federal market for one fiscal year at a time.
+
+<Frame caption="The Analytics Dashboard. Change the fiscal year using the dropdown in the top right.">
+  ![Analytics Dashboard showing Total Awards, Total Value, Recipients and Agencies cards above three chart panels](/images/awards/analytics-dashboard.png)
+</Frame>
+
+Four cards summarize the year:
+
+| Card | What it counts |
+| :-- | :-- |
+| **Total Awards** | Awards recorded for the selected fiscal year. |
+| **Total Value** | The total amount obligated across those awards. |
+| **Recipients** | How many separate companies received awards. |
+| **Agencies** | How many government agencies issued them. |
+
+Below the cards, five panels break the data down.
+
+<Frame caption="Top Recipients and the Top Awards table, further down the page.">
+  ![Analytics Dashboard scrolled to show the Top Recipients list and the Top Awards table](/images/awards/analytics-dashboard-scrolled.png)
+</Frame>
+
+| Panel | What it shows |
+| :-- | :-- |
+| **Top Agencies** | Agencies ranked by how much they obligated, with award counts. Click one to drill down. |
+| **Top NAICS Codes** | A chart splitting awards across industry classifications. |
+| **Set-Aside Distribution** | A chart splitting awards by set-aside category, such as Small Business, 8(a), HUBZone, and No Set-Aside. |
+| **Top Recipients** | Companies ranked by value received, with award counts. Click one to drill down. |
+| **Top Awards** | The highest value contracts, with agency, recipient, and amount. |
+
+**Top Agencies** and **Top Recipients** each have a search button, so you can jump straight to one instead of scrolling.
+
+Everything on this page is clickable. Click an award in the **Top Awards** table to open its details. Click a recipient to open that company's profile and award history. Use the fiscal year selector to compare one year against another.
+
+<Tip>
+  Look at the same NAICS code across two or three fiscal years before deciding a market is worth entering. One year tells you who is winning. Several years tell you whether the spending is growing, flat, or moving into fewer hands.
+</Tip>
+
+## 9. Entities
+
+The Entities page lets you search for companies and organizations that have received federal contracts.
+
+<Frame caption="Entity Search. Search by legal business name, UEI SAM, or CAGE code.">
+  ![Entity Search page with a search field, Filters and Export buttons, and a results table](/images/awards/entity-search.png)
+</Frame>
+
+### Searching for entities
+
+You can search using the company's business name, its CAGE code, its primary NAICS, and other details. The results table shows:
+
+| Column | What it shows |
+| :-- | :-- |
+| **UEI SAM** | The Unique Entity Identifier from SAM. |
+| **Legal Business Name** | The registered name. Any trading name appears underneath as DBA. |
+| **CAGE Code** | The Commercial and Government Entity code. |
+| **Primary NAICS** | The company's main industry classification. |
+| **Actions** | **View** opens the full profile. |
+
+**Filters** narrows the results further. **Export** downloads them.
+
+### Viewing an entity profile
+
+Click the legal business name to open that organization's profile, where you can explore its award history, its contracting activity, and the agencies it has worked with.
+
+| Section | What it shows |
+| :-- | :-- |
+| **Total Awards** | How many awards this company has received. |
+| **Total Value** | The combined value of those awards. |
+| **Recent Awards** | Its most recent contract awards. |
+| **Award History** | Award activity over time, shown as a chart. |
+| **Top Agencies** | Which agencies have awarded contracts to this company. |
+
+Every award listed on the profile is a link. Click one to open its full details, and from there click through to the agency. You can move from a company, to a contract, to an agency without running a new search.
+
+<Tip>
+  Before approaching a teaming partner, open their profile and look at which agencies they have worked with. A partner who already has a relationship at your target agency is worth more to a bid than a bigger company with no history there.
+</Tip>
 
 ## Related topics
 
-- [Forecasts](/Version-2/Forecasts) — Planned future procurements not yet solicited.
-- [eBuy Opportunities](/Version-2/eBuy-Opportunities) — GSA Schedule opportunities from the eBuy portal.
-- [Campaigns](/Version-2/Campaigns) — Sending outreach emails to contracting officers.
-- [Pipeline Management](/Version-2/Pipeline-Management) — Tracking opportunities through the 8-stage capture lifecycle.
+- [Forecasts](/Version-2/Forecasts). Planned procurements agencies have announced but not yet solicited.
+- [Pipeline Management](/Version-2/Pipeline-Management). How to track a re-compete you found here through the 8-stage capture lifecycle.
+- [Campaigns](/Version-2/Campaigns). How to send outreach emails to contracting officers about contracts you found in Expiring Contracts.
 
-**Parent topic:** [Kontratar v2.0 Documentation](/)
+**Parent topic:** [Kontratar v2.0 Documentation](/Version-2/whats-new-v2)

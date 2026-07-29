@@ -3,82 +3,152 @@ title: "Campaigns"
 description: "How to create email templates and send bulk outreach campaigns to contracting officers and teaming partners."
 ---
 
-**Campaigns **let you send bulk outreach emails to contracting officers, potential teaming partners, or other contacts. The system has two components: **Templates** (which define the email content) and **Campaigns** (which send a template to a list of recipients). Campaigns can be sent to government officials and private individuals.
+**Campaigns** let you send bulk outreach emails to contracting officers, potential teaming partners, or other contacts. Campaigns can be sent to government officials and to private individuals.
+
+The most common use is re-compete outreach. You find a contract approaching its expiration date, and you contact the people responsible for it before the new solicitation is written.
+
+The module has two parts:
+
+| Part | What it does |
+| :-- | :-- |
+| **Templates** | Define the email content. Written once, reused across many campaigns. |
+| **Campaigns** | Send a template to a list of recipients. |
+
+You always build the template first. A campaign has nothing to send without one.
 
 **How to get there:** Sidebar → Workspace → Click **Campaigns**
 
-## Campaign templates
+## 1. Campaign templates
 
 A template defines the structure and content of your outreach email. Once created, a template can be reused across multiple campaigns.
+
+The Templates tab lists everything you have built. It has a search box, a switch between list and grid view, a **Filter** button, and a page size selector at the bottom.
 
 ### Creating a template
 
 1. On the Campaigns page, select the **Templates** tab.
 2. Click **Create New Template**.
-3. Fill in the following fields:
+3. Fill in the fields:
 
 | Field | Description |
-| --- | --- |
-| **Template Name** | A descriptive name (for example, "541511\_SUBSCRIPTION" or "AES\_8A\_REACHOUT"). |
-| **Status** | Set to **Active** to make the template available for campaigns. Set to **Inactive** to save as a draft. |
+| :-- | :-- |
+| **Template Name** | Required. A descriptive name, for example `541511_SUBSCRIPTION` or `AES_8A_REACHOUT`. |
+| **Status** | Required. Set to **Active** to make the template available for campaigns. Set to **Inactive** to save it as a draft. |
 | **Email Subject** | The subject line recipients see in their inbox. |
-| **Body** | The email content. Write it generically so it works for all recipients in a campaign. |
-| **Attachment** | Optional. Drag and drop a file or click to browse. Supported formats: PDF, TXT, DOC, DOCX, XLS, XLSX. |
+| **Email Body** | The email content. Write it generically so it works for everyone in the campaign. |
+| **Attachment** | Optional. Drag and drop a file, or click to browse. Supported formats: `.pdf`, `.txt`, `.doc`, `.docx`, `.xls`, `.xlsx`. |
 
-4. Click **Create Template** to save.
+4. Click **Create Template**.
 
-### Customizable tokens in attachments
+<Tip>
+  Name your templates after what they target rather than when you wrote them. `541511_SUBSCRIPTION` tells you the NAICS code and the offer at a glance. `Template 3` tells you nothing when you are picking one from a list months later.
+</Tip>
 
-Campaign attachments support four customizable token fields. When you embed these tokens inside a PDF, CSV, or other attachment file, Kontratar replaces each token with the recipient-specific or campaign-specific data when the campaign is sent. This lets you personalize attached documents without creating a separate file for each recipient.
+### Customizable tokens
+
+Templates support four tokens. A token is a placeholder you type into your email, and Kontratar swaps it for real information when the campaign sends.
+
+| Token | Replaced with |
+| :-- | :-- |
+| `{{RECIPIENT_NAME}}` | The recipient's full name. |
+| `{{COMPANY_NAME}}` | The recipient's organization. |
+| `{{CONTRACT_NAME}}` | The related contract title. |
+| `{{EXPIRY_DATE}}` | The contract expiration date. |
+
+So if you write this in your email body:
+
+```text
+Dear {{RECIPIENT_NAME}},
+
+I am writing regarding {{CONTRACT_NAME}}, which we understand is
+due to expire on {{EXPIRY_DATE}}.
+```
+
+A recipient receives this:
+
+```text
+Dear Janet Okafor,
+
+I am writing regarding Enterprise Geospatial Support Services,
+which we understand is due to expire on 30 September 2026.
+```
+
+<Info>
+  **Tokens work in attachments too, not just the email body.** If you attach a capability statement or a cover letter containing the same tokens, each recipient gets a document addressed to them personally rather than a generic one. This is the difference between a mail merge and a mass email.
+</Info>
+
+<Warning>
+  **A token that does not resolve is sent exactly as you typed it.** If something goes wrong with the data, your recipient opens an email that begins `Dear {{RECIPIENT_NAME}}`. Always preview the email with a real recipient loaded before you launch the campaign.
+</Warning>
 
 ### Managing templates
 
-The Templates tab shows a table of all your templates with columns: Name, Status (Active or Inactive), and Attachment (filename or dash if none).
+Use the search box to find a template by name. The **Filter** button narrows the list further, and the view switch changes between a list and a grid of cards. The page size selector at the bottom controls how many templates you see at once.
 
-| Action | How to do it |
-| --- | --- |
-| **Edit a template** | Click **View/Edit** on the template row. Update the name, subject, body, or attachment. |
-| **Delete a template** | Click **Delete** on the template row. This action is permanent. |
-| **Disable a template** | Edit the template and switch Status to **Inactive**. The template is preserved but cannot be selected for new campaigns. |
+## 2. Sending a campaign
 
-## Sending a campaign
+Once you have an active template, you can build a campaign around it.
 
-1. On the Campaigns page, click the **Campaigns** tab.
+1. Select the **Campaigns** tab.
 2. Click **Create New Campaign**.
-3. Select a **Template** from the dropdown. Only templates with Active status appear.
-4. Enter recipient email addresses. You can type a single address or paste multiple addresses for bulk outreach.
-5. Review the preview showing the subject line, body, and attachment.
-6. Click **Send**. The email is dispatched to every address you entered.
+3. Fill in the fields:
 
-## The 21-day government email rule
+| Field | Description |
+| :-- | :-- |
+| **Template** | Choose from your Active templates. |
+| **Identifier Type** | How recipients are identified. **Email** is the default. |
+| **End Date** | The date the campaign stops sending. |
+| **Recipient Emails** | Loads automatically once you select a template. |
 
-When you send a campaign to a government email address, Kontratar tracks the send date. If you attempt to send another campaign to the same government email address within 21 days, the system displays a warning before allowing you to proceed.
+4. Click **Create Campaign**.
 
-This restriction exists because government agencies monitor for unsolicited bulk emails. Sending multiple emails to the same contracting officer in a short window may cause your email address to be flagged as spam or blocked.
+<Note>
+  **You do not type in the recipient list.** Recipient emails are derived automatically from the awards associated with the template you selected. The form tells you this: it shows `Select a template to load approver emails for this campaign` until you pick one.
 
-The 21-day cooling period protects your sender reputation. You can override the warning and send anyway, but you do so at your own risk.
+  So if your recipient list is empty or shorter than you expected, the cause is the template's award association rather than anything on the campaign form. Go back and check which awards the template is linked to.
+</Note>
 
-## Campaign use cases
+The Campaigns tab lists everything you have sent or scheduled, showing the template used, the end date, the identifier type, and the identifier.
+
+## 3. The 21-day government email rule
+
+<Warning>
+  **Kontratar enforces a 21-day cooling period on government email addresses.** If you try to send to a `.gov` or `.mil` address that already received an email from you within the past 21 days, you will get a warning.
+
+  This protects you rather than restricting you. Repeated contact with government addresses can get your sending domain flagged as spam, and that affects every email your organization sends, not just campaigns. A colleague chasing a contract award notice would find their message in a junk folder because of a campaign you sent last week.
+
+  Treat the warning as a reason to wait rather than an obstacle to work around.
+</Warning>
+
+## 4. Campaign examples
 
 ### Expiring software contract outreach
 
-1. Go to **Forecasts**. Search for software contracts expiring within the next year.
-2. Collect contracting officer email addresses from the forecast detail pages.
-3. Go to **Campaigns**. Create a template highlighting your software renewal capabilities. Attach your Capability Statement PDF.
-4. Create a new Campaign using that template. Paste in the contracting officer emails.
-5. Click **Send**.
+You sell software licensing and support, and you want to reach agencies whose current contracts are ending.
+
+1. Use [Awards](/Version-2/Awards) to search for software-related contracts.
+2. Filter for contracts with performance periods ending within the next 12 months.
+3. Export the contracting officer contacts.
+4. Create a template that highlights your software capabilities, using `{{CONTRACT_NAME}}` and `{{EXPIRY_DATE}}` so each email names the specific contract that is ending.
+5. Create a campaign against that template.
+
+Because the tokens fill themselves in, one template covers every contract on your list. The contracting officer reads an email about their contract, not a circular about software in general.
 
 ### Targeted industry capability outreach
 
-1. Go to **Forecasts**. Search for agencies or companies currently using a specific technology (for example, IBM software).
-2. Gather relevant contact email addresses.
-3. Go to **Campaigns**. Create a template emphasizing your expertise with that technology. Attach your Capability Statement.
-4. Create a Campaign, paste in the email addresses, and send.
+You hold a specialist certification, and you want to reach both the government and the companies likely to bid.
+
+1. Use [Forecasts](/Version-2/Forecasts) to find upcoming procurements that mention your specialization.
+2. Use [Awards](/Version-2/Awards) to identify the incumbent contractors on related work.
+3. Create a template that emphasizes your certifications and partnership status.
+4. Send it to government contacts and to potential teaming partners.
+
+The second group matters as much as the first. A prime contractor assembling a bid team needs the capability you hold, and they are making that decision months before the solicitation appears.
 
 ## Related topics
 
-- [Forecasts](/Version-2/Forecasts) — Finding future procurement opportunities and contracting officer contacts.
-- [Awards](/Version-2/Awards) — Researching who is winning contracts for competitive outreach.
-- [Pipeline Management](/Version-2/Pipeline-Management) — Tracking your outreach efforts through the capture lifecycle.
+- [Awards](/Version-2/Awards). Where you find contracts approaching expiration and the contacts associated with them.
+- [Forecasts](/Version-2/Forecasts). Where you find requirements still in the planning phase, before a solicitation exists.
+- [Pipeline Management](/Version-2/Pipeline-Management). How to track the pursuits your outreach is supporting.
 
-**Parent topic:** [Kontratar v2.0 Documentation](/)
+**Parent topic:** [Kontratar v2.0 Documentation](/Version-2/whats-new-v2)

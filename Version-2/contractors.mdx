@@ -1,0 +1,124 @@
+---
+title: "Contractors"
+description: "How to search GSA Schedule holder records for teaming partner and competitive research."
+---
+
+**Contractors** is a searchable register of GSA Schedule holders. These are the companies that hold Multiple Award Schedule contracts with the General Services Administration, which means they can sell to federal agencies through an established vehicle.
+
+The module is a reference tool. It shows you data and does not do anything else. You cannot create records here, track a pursuit, or send anything. What it does well is answer two questions: who holds the schedule access you need, and who else is competing for the work you want.
+
+**How to get there:** Sidebar → Workspace → Click **Contractors**
+
+<Note>
+  **The sidebar says Contractors. The page says GSA Schedule Holders.** They are the same thing. If you are looking for schedule holder data and cannot find a menu item called GSA Schedule Holders, click Contractors.
+</Note>
+
+## 1. Searching for schedule holders
+
+The search box sits across the top of the page. It searches contractor names, contract numbers, NAICS codes, UEI, and other fields at the same time, so you do not have to pick which one you are searching before you type.
+
+Press <kbd>Ctrl</kbd> \+ <kbd>K</kbd> to jump straight to it from anywhere on the page.
+
+The **Filter** button to the right of the search box narrows results further.
+
+### Reading the results table
+
+| Column | What it shows |
+| :-- | :-- |
+| **Contractor Name** | The company name. Click it to open the full record. |
+| **Contract Number** | The GSA contract number. |
+| **NAICS** | The primary NAICS code for the schedule. |
+| **Option Period End** | The date the current option period ends. |
+| **Socio-Economic** | Status badges such as SB, SDB, WOSB (SBA), EDWOSB, and SDVOSB (SBA). |
+
+Every column can be sorted. Click a column heading to sort by it.
+
+Here is how a real row reads:
+
+> **1013 ENTERPRISE L.L.C.** holds contract `47QTCA23D00B1` under NAICS `541512`. Its current option period ends `07/10/2028`. Its socio-economic badges show `EDWOSB`, `WOSB (SBA)`, and `+3`.
+
+That `+3` means the company holds three more socio-economic designations than fit in the column. Open the record to see them all.
+
+<Note>
+  **A company can hold several contract numbers.** Some rows show two or three numbers together, because GSA Schedule holders often hold more than one contract. When precision matters, match on the contract number rather than the company name.
+</Note>
+
+## 2. Reading a contractor record
+
+Click a contractor name to open its record. The details slide in from the right of the screen in four sections.
+
+### Identity
+
+| Field | What it shows |
+| :-- | :-- |
+| **Contractor Name** | The registered company name, including any DBA. |
+| **Contract Number** | The GSA contract number this record covers. |
+| **SAM UEI** | The company's Unique Entity Identifier from SAM. |
+| **NAICS** | The primary NAICS code. |
+| **Socio-Economic** | The full list of designations, written out rather than abbreviated. |
+| **EPLS** | Whether the company appears on the Excluded Parties List System. |
+
+<Info>
+  **EPLS is a screening field, and it is the one to check first.** The Excluded Parties List System records companies barred from federal contracting. A record reading `Contractor not found on the Excluded Parties List System` means the company is clear.
+
+  Check this before you propose a teaming arrangement. An excluded partner does not weaken your bid, it disqualifies it.
+</Info>
+
+### Contact
+
+Address, phone, email, and website. The website is a live link.
+
+### Government POC
+
+The point of contact on the government side: name, email, and phone.
+
+### Contract dates
+
+| Field | What it shows |
+| :-- | :-- |
+| **Current Option Period End** | When the option period currently in force ends. |
+| **Ultimate Contract End** | The final possible end date, once every remaining option has been exercised. |
+| **Created** | When the record was added. |
+| **Updated** | When the record was last changed. |
+
+<Warning>
+  **Current option period end and ultimate contract end are not the same date, and confusing them is expensive.** The option period is the term currently in force. The ultimate end is the last date the contract could run to if the government exercises every option it holds.
+
+  A partner whose option period ends in eight months might still have six years of contract left, or might be finishing. Read both fields before you rely on their schedule access for a multi-year pursuit.
+</Warning>
+
+<Note>
+  **Fields showing a dash have no value in the source data.** This is common, particularly in the Government POC section. It means the information was never recorded, not that Kontratar failed to load it.
+</Note>
+
+## 3. Using Contractors for research
+
+| Purpose | How |
+| :-- | :-- |
+| **Teaming partner research** | Find companies holding the schedule access you need but do not have. |
+| **Competitive analysis** | See who else holds schedules in your NAICS code. |
+| **Market intelligence** | Read the socio-economic mix across a NAICS to understand the set-aside competition. |
+
+### Example: finding a teaming partner
+
+You want to bid on work that requires a GSA Schedule you do not hold.
+
+1. Search Contractors by the NAICS code the requirement falls under.
+2. Sort by **Option Period End** and ignore anything expiring before your contract would finish. A partner whose schedule access runs out mid-performance is no use.
+3. Open the records of the companies that remain and check the **EPLS** field on each.
+4. Take the shortlist into [Awards](/Version-2/Awards) and look up each company's entity profile.
+5. Check which agencies they have already worked with.
+
+Step 5 is the one that changes your shortlist. Two companies can both hold the right schedule and both be clear on EPLS, but the one that has already delivered for your target agency brings a relationship to the bid. The other brings a contract vehicle.
+
+<Tip>
+  Do this research before you approach anyone. A first conversation goes differently when you already know their contract number, their schedule expiry, and the agencies they serve. It also stops you spending three weeks on a partner whose schedule lapses next year.
+</Tip>
+
+## Related topics
+
+- [Awards](/Version-2/Awards). Entity profiles and award history for the same companies, so you can see what they have actually won.
+- [Campaigns](/Version-2/Campaigns). How to send outreach to teaming partners you identify here.
+- [Pipeline Management](/Version-2/Pipeline-Management). How to track the pursuit your teaming arrangement supports.
+
+**Parent topic:** [Kontratar v2.0 Documentation](/Version-2/whats-new-v2)
